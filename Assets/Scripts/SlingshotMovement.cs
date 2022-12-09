@@ -24,20 +24,25 @@ public class SlingshotMovement : MonoBehaviour
             // do stuff during drag
         } else {
             // Updating initial position
-            initialPosition = transform.position;
+            initialPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+
+        Cursor.visible = false;
+
+        if (Input.GetButtonDown("Fire1")) {mouseDown();}
+        if (Input.GetButtonUp("Fire1")) {mouseUp();}
     }
 
     // Starts of a drag
-    private void OnMouseDown() {
+    private void mouseDown() {
         GetComponent<SpriteRenderer>().color = Color.red;
         isDragging = true;
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = 0;
     }
 
     // On release, get the force and apply it with Propel()
-    private void OnMouseUp() {
+    private void mouseUp() {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = 0;
         GetComponent<SpriteRenderer>().color = Color.white;
         Vector3 draggedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 forceDirection = initialPosition - draggedPosition;
