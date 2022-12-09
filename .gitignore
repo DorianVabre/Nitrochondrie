@@ -106,3 +106,4 @@ WwiseUnityIntegration_*_Src.zip
 # Assets/Plugins/Editor/Jetbrains.meta
 # Assets/Plugins/Editor/Jetbrains/
 # .idea
+*.log
