@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class SlingshotMovement : MonoBehaviour
 {
     Rigidbody2D rb;
+    GameObject arrowLine;
+    GameObject arrowHead;
 
     public float forceMultiplier = 50;
     public float deadZone = 0.02f;
@@ -16,11 +18,16 @@ public class SlingshotMovement : MonoBehaviour
     private bool isDragging;   
 
     private void Awake() {
+        InputSystem.pollingFrequency = 120;
         rb = GetComponent<Rigidbody2D>();
+        arrowLine = GameObject.Find("LineContainer");
+        arrowHead = GameObject.Find("ArrowHead");
     }
 
     void Start() {
         isDragging = false;
+        arrowLine.SetActive(false);
+        arrowHead.SetActive(false);
     }
 
     void Update()
@@ -33,8 +40,24 @@ public class SlingshotMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context) {
         currentMovementInput = context.ReadValue<Vector2>();
-        Debug.Log(currentMovementInput);
+        
+        // Moving the direction arrowLine
+        Vector2 vectorForDirectionArrow = currentMovementInput * -1;
+        float angle = Mathf.Atan2(vectorForDirectionArrow.y, vectorForDirectionArrow.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        // Scaling the line
+        Vector2 localScale = new Vector2(currentMovementInput.magnitude, 1);
+        arrowLine.transform.localScale = localScale;
+
+        // Showing the arrow
+        arrowLine.SetActive(true);
+        arrowHead.SetActive(true);
+
+        // Moving the bacteria
         if (Mathf.Abs(currentMovementInput.x) <= deadZone && Mathf.Abs(currentMovementInput.y) <= deadZone) {
+            arrowLine.SetActive(false);
+            arrowHead.SetActive(false);
             if (lastMovementInput.x != 0 && lastMovementInput.y != 0) {
                 Propel(lastMovementInput * -1);
                 lastMovementInput = Vector2.zero;
