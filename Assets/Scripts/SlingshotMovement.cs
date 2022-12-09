@@ -20,8 +20,15 @@ public class SlingshotMovement : MonoBehaviour
     private void Awake() {
         InputSystem.pollingFrequency = 120;
         rb = GetComponent<Rigidbody2D>();
-        arrowLine = GameObject.Find("LineContainer");
-        arrowHead = GameObject.Find("ArrowHead");
+
+        foreach (Transform child in transform){
+            if (child.name == "LineContainer"){
+                arrowLine = child.gameObject;
+            }
+            if (child.name == "ArrowHead"){
+                arrowHead = child.gameObject;
+            }
+        }
     }
 
     void Start() {
@@ -74,6 +81,9 @@ public class SlingshotMovement : MonoBehaviour
         rb.angularVelocity = 0;
         rb.AddForce(force * forceMultiplier);
     }
+
+
+
 
 
 

@@ -1,12 +1,12 @@
 {
-    "name": "Bacteria1",
+    "name": "BacteriaInputActions",
     "maps": [
         {
             "name": "Bacteria",
             "id": "10a896a3-8906-4b6b-9d87-8d025f093abe",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "MoveFirstBacteria",
                     "type": "PassThrough",
                     "id": "b728fc56-5630-44ef-823f-e822a3f23072",
                     "expectedControlType": "Vector2",
@@ -15,10 +15,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Action",
-                    "type": "Button",
-                    "id": "fd63d4f4-f16b-4339-971f-bb370808653f",
-                    "expectedControlType": "Button",
+                    "name": "MoveSecondBacteria",
+                    "type": "PassThrough",
+                    "id": "26a03a2a-34e5-4259-ae0b-c1a2a475d592",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -31,19 +31,19 @@
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controller;Gamepad",
-                    "action": "Move",
+                    "groups": "",
+                    "action": "MoveFirstBacteria",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "be5749e2-63e2-4c18-b8a3-88fe4d0c5711",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "955213e7-adba-4f99-a842-0e9783be6840",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controller;Gamepad",
-                    "action": "Action",
+                    "groups": "",
+                    "action": "MoveSecondBacteria",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -110,11 +110,6 @@
                     "isOR": false
                 }
             ]
-        },
-        {
-            "name": "Controller",
-            "bindingGroup": "Controller",
-            "devices": []
         }
     ]
 }
