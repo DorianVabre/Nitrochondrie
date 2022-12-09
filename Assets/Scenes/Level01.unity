@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 141849163}
   - component: {fileID: 141849167}
   - component: {fileID: 141849166}
+  - component: {fileID: 141849168}
   m_Layer: 0
   m_Name: Bacteria
   m_TagString: Untagged
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1139287585c82a4893ef34583ca2a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceMultiplier: 100
+  forceMultiplier: 300
 --- !u!212 &141849164
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -289,6 +290,56 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &141849168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141849162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c3ffebf1b9f5dee418bdea2f4b156445, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 141849163}
+        m_TargetAssemblyTypeName: SlingshotMovement, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b728fc56-5630-44ef-823f-e822a3f23072
+    m_ActionName: Bacteria/Move[/XInputControllerWindows/leftStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fd63d4f4-f16b-4339-971f-bb370808653f
+    m_ActionName: Bacteria/Action[/XInputControllerWindows/buttonSouth]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: Bacteria
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
