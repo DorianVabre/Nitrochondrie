@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 898740358}
   - component: {fileID: 898740357}
   - component: {fileID: 898740356}
+  - component: {fileID: 898740359}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -621,6 +622,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &898740359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898740355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b10e868b3ce71743a421f123d62f915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bumpAnimator:
+    animationSpeed: 25
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    magnitude: 1
+  bacteria: {fileID: 0}
+  cameraShaker: {fileID: 1206058830}
 --- !u!1001 &1157675873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -693,6 +717,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1139287585c82a4893ef34583ca2a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1206058829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206058831}
+  - component: {fileID: 1206058830}
+  m_Layer: 0
+  m_Name: CameraShaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1206058830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206058829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc699a14fc86fd4449dc191213dc1131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggler:
+    totalWiggleDurationSeconds: 0.3
+    wiggleIntervalSeconds: 0.02
+    wiggleIntensityCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.0016899109
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    wiggleMagnitude: 0.2
+    isActive: 0
+    wiggleBaseValue: {x: 1, y: 1, z: 0}
+  cameraHolder: {fileID: 519420028}
+  originPosition: {x: 0, y: 0, z: 0}
+  isShaking: 0
+--- !u!4 &1206058831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206058829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1426786672
 GameObject:
   m_ObjectHideFlags: 0
