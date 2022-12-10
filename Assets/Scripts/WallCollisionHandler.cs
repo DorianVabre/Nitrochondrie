@@ -74,7 +74,7 @@ using UnityEngine;
     public Vector3 wiggleBaseValue = new Vector3(1, 1, 0);
     [NonSerialized] public Vector3 wiggleAccessValue;
 
-    public void LauchWiggler () {
+    public void LaunchWiggler () {
         isActive = true;
         timeElapsedSinceLastWiggleSeconds = 0.0f;
         totalTimeElapsedSinceWiggleLaunchSeconds = 0.0f;
@@ -128,7 +128,7 @@ using UnityEngine;
     public void LaunchShake () {
         isActive = true;
         originPosition = objectToShake.transform.position;
-        wiggler.LauchWiggler();
+        wiggler.LaunchWiggler();
     }
 
     public void Update () {
@@ -154,6 +154,8 @@ public class WallCollisionHandler : MonoBehaviour
     private Vector3 baseLocalScale;
     public SlingshotMovement bacteria;
 
+    public CameraShaker cameraShaker;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -171,7 +173,13 @@ public class WallCollisionHandler : MonoBehaviour
     {
         bacteria = collision.gameObject.GetComponent<SlingshotMovement>();
         // Checks for a match with the SlingshotMovement component on any GameObject that collides with the wall
-        if (bacteria && !bumpAnimator.isActive)
+        if (bacteria == null) {
+            return;
+        }
+
+        cameraShaker.LaunchShake();
+
+        if (!bumpAnimator.isActive)
         {
             bumpAnimator.magnitude = 0.05f * Mathf.Max(collision.relativeVelocity.magnitude, 5.0f)/5.0f;
             bumpAnimator.LauchAnim();
