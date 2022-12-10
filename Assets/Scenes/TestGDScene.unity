@@ -747,13 +747,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wiggler:
-    totalWiggleDurationSeconds: 0.3
-    wiggleIntervalSeconds: 0.02
-    wiggleIntensityCurve:
+    durationIntensityControllerCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0016899109
+        time: 0
+        value: 0.2
+        inSlope: 0.051120825
+        outSlope: 0.051120825
+        tangentMode: 0
+        weightedMode: 2
+        inWeight: 0
+        outWeight: 0.6322908
+      - serializedVersion: 3
+        time: 1
+        value: 0.6
+        inSlope: 3.2269142
+        outSlope: 3.2269142
+        tangentMode: 0
+        weightedMode: 1
+        inWeight: 0.0786137
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    intervalIntensityControllerCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.02
+        inSlope: -0.01
+        outSlope: -0.01
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.01
+        inSlope: -0.01
+        outSlope: -0.01
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    magnitudeIntensityControllerCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.12
+        inSlope: 0.008099253
+        outSlope: 0.008099253
+        tangentMode: 0
+        weightedMode: 2
+        inWeight: 0
+        outWeight: 0.6948436
+      - serializedVersion: 3
+        time: 1
+        value: 0.25
+        inSlope: 0.30411142
+        outSlope: 0.30411142
+        tangentMode: 0
+        weightedMode: 1
+        inWeight: 0.13694
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    baseVector: {x: 1, y: 1, z: 0}
+    magnitudeDecayCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
         value: 1
         inSlope: 0
         outSlope: 0
@@ -773,9 +844,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    wiggleMagnitude: 0.2
     isActive: 0
-    wiggleBaseValue: {x: 1, y: 1, z: 0}
   cameraHolder: {fileID: 519420028}
   originPosition: {x: 0, y: 0, z: 0}
   isShaking: 0
