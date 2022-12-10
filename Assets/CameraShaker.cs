@@ -15,15 +15,15 @@ public class CameraShaker : MonoBehaviour
         originPosition = cameraHolder.transform.position;
     }
 
-    public void LaunchShake () {
+    public void LaunchShake (float intensityParameter = 0.0f) {
         if (isShaking) {
-            wiggler.LaunchWiggler();
+            wiggler.LaunchWiggler(intensityParameter);
             return;
         }
 
         isShaking = true;
         originPosition = cameraHolder.transform.position;
-        wiggler.LaunchWiggler();
+        wiggler.LaunchWiggler(intensityParameter);
     }
 
     public void LateUpdate () {

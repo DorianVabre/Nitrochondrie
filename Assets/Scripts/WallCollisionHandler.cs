@@ -58,32 +58,44 @@ using UnityEngine;
     // based on a choice of vector and a selected magnitude. 
     // Eases the magnitude over time according to an animation curve.
 
-    [Header("Wiggle Controller")] [Space(3)] public float totalWiggleDurationSeconds = 1.0f;
-    public float wiggleIntervalSeconds = 0.1f;
+    [Header("Wiggle Controller")] [Space(3)] public AnimationCurve durationIntensityControllerCurve;
+    public AnimationCurve intervalIntensityControllerCurve;
+    public AnimationCurve magnitudeIntensityControllerCurve;
+    [Space(3)]
+    public Vector3 baseVector = new Vector3(1, 1, 0);
 
-    private float timeElapsedSinceLastWiggleSeconds = 0.0f;
-    private float totalTimeElapsedSinceWiggleLaunchSeconds = 0.0f;
+    private float intensityModulatedDurationSeconds = 1.0f;
+    private float intensityModulatedIntervalSeconds = 0.1f;
+    private float intensityModulatedMagnitude = 1.0f;
 
-    public AnimationCurve wiggleIntensityCurve;
+    private float timeElapsedSinceLastSeconds = 0.0f;
+    private float totalTimeElapsedSeconds = 0.0f;
+
+    [Header("Wiggle magnitude decay curve")] [Space(3)]
+    public AnimationCurve magnitudeDecayCurve;
     
-    public float wiggleMagnitude = 1.0f;
     private float easedMagnitude;
     
+    [Space(5)] [Header("Exposed internals for debugging")]
     public bool isActive = false;
-
-    public Vector3 wiggleBaseValue = new Vector3(1, 1, 0);
     [NonSerialized] public Vector3 wiggleAccessValue;
 
-    public void LaunchWiggler () {
+    public void LaunchWiggler (float intensityParameter = 0.0f) {
+        intensityModulatedDurationSeconds = durationIntensityControllerCurve.Evaluate(intensityParameter);
+        intensityModulatedIntervalSeconds = intervalIntensityControllerCurve.Evaluate(intensityParameter);
+
+        intensityModulatedMagnitude = magnitudeIntensityControllerCurve.Evaluate(intensityParameter);
+
         isActive = true;
-        timeElapsedSinceLastWiggleSeconds = 0.0f;
-        totalTimeElapsedSinceWiggleLaunchSeconds = 0.0f;
+        
+        timeElapsedSinceLastSeconds = 0.0f;
+        totalTimeElapsedSeconds = 0.0f;
     }
 
     public void Wiggle () {
-        wiggleAccessValue = new Vector3 (wiggleBaseValue.x * easedMagnitude * UnityEngine.Random.Range(-1.0f, 1.0f), 
-        wiggleBaseValue.y * easedMagnitude * UnityEngine.Random.Range(-1.0f, 1.0f),
-        wiggleBaseValue.z * easedMagnitude * UnityEngine.Random.Range(-1.0f, 1.0f));
+        wiggleAccessValue = new Vector3 (baseVector.x * easedMagnitude * UnityEngine.Random.Range(-1.0f, 1.0f), 
+        baseVector.y * easedMagnitude * UnityEngine.Random.Range(-1.0f, 1.0f),
+        baseVector.z * easedMagnitude * UnityEngine.Random.Range(-1.0f, 1.0f));
     }
 
     public void Update () {
@@ -92,21 +104,21 @@ using UnityEngine;
             return;
         }
 
-        timeElapsedSinceLastWiggleSeconds += Time.deltaTime;
-        totalTimeElapsedSinceWiggleLaunchSeconds += Time.deltaTime;
+        timeElapsedSinceLastSeconds += Time.deltaTime;
+        totalTimeElapsedSeconds += Time.deltaTime;
 
-        if (timeElapsedSinceLastWiggleSeconds > wiggleIntervalSeconds) {
+        if (timeElapsedSinceLastSeconds > intensityModulatedIntervalSeconds) {
 
-            easedMagnitude = wiggleIntensityCurve.keys.Length > 0 ? 
-            wiggleMagnitude * wiggleIntensityCurve.Evaluate(totalTimeElapsedSinceWiggleLaunchSeconds / totalWiggleDurationSeconds) : 
-            (1.0f - (totalTimeElapsedSinceWiggleLaunchSeconds / totalWiggleDurationSeconds)) * wiggleMagnitude;
+            easedMagnitude = magnitudeDecayCurve.keys.Length > 0 ? 
+            intensityModulatedMagnitude * magnitudeDecayCurve.Evaluate(totalTimeElapsedSeconds / intensityModulatedDurationSeconds) : 
+            (1.0f - (totalTimeElapsedSeconds / intensityModulatedDurationSeconds)) * intensityModulatedMagnitude;
 
             Wiggle();
 
-            timeElapsedSinceLastWiggleSeconds -= wiggleIntervalSeconds;
+            timeElapsedSinceLastSeconds -= intensityModulatedIntervalSeconds;
         }
 
-        if (totalTimeElapsedSinceWiggleLaunchSeconds > totalWiggleDurationSeconds) {
+        if (totalTimeElapsedSeconds > intensityModulatedDurationSeconds) {
             wiggleAccessValue = Vector3.zero;
             isActive = false;
             return;
@@ -177,11 +189,11 @@ public class WallCollisionHandler : MonoBehaviour
             return;
         }
 
-        cameraShaker.LaunchShake();
+        cameraShaker.LaunchShake(Mathf.Min(Mathf.Abs(collision.relativeVelocity.magnitude), 5.0f)/5.0f);
 
         if (!bumpAnimator.isActive)
         {
-            bumpAnimator.magnitude = 0.05f * Mathf.Max(collision.relativeVelocity.magnitude, 5.0f)/5.0f;
+            bumpAnimator.magnitude = 0.05f * Mathf.Min(collision.relativeVelocity.magnitude, 5.0f)/5.0f;
             bumpAnimator.LauchAnim();
         }
     }
