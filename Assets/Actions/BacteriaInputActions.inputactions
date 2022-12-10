@@ -1,0 +1,54 @@
+{
+    "name": "BacteriaInputActions",
+    "maps": [
+        {
+            "name": "Bacteria",
+            "id": "2a2c2f57-5146-4e7c-9221-8115f66c9338",
+            "actions": [
+                {
+                    "name": "MoveFirstBacteria",
+                    "type": "PassThrough",
+                    "id": "4d25a0a7-544a-46df-adc9-24a6b5de94df",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveSecondBacteria",
+                    "type": "PassThrough",
+                    "id": "aba5a8a1-5863-4f88-a7cc-9e147a3536cf",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f6c87ce6-fa03-435f-bb57-4f3b6b028d08",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveFirstBacteria",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a53d6a0b-e57d-4d41-85c6-633bb22afd76",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveSecondBacteria",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
