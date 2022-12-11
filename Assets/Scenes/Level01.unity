@@ -447,7 +447,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
       propertyPath: deadZone
-      value: 0.15
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: timeBetweenMovements
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4936734750203165417, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
       propertyPath: m_Name
@@ -630,7 +634,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
       propertyPath: deadZone
-      value: 0.15
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: timeBetweenMovements
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4936734750203165417, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
       propertyPath: m_Name
