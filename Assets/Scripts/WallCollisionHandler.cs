@@ -3,36 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable] public class AutoAnimator {
-        
+[Serializable] public abstract class AutoAnimator {
     [Header("Animation Controller")] [Space(3)] public float animationSpeed = 25.0f;
     public AnimationCurve curve;
     public float magnitude = 1.0f;
 
     [NonSerialized] public bool isActive = false;
     
-    [NonSerialized] private float animationSlider = 0.0f; // Goes from 0 to 100 and serves to control the animation.
+    [NonSerialized] public float animationSlider = 0.0f; // Goes from 0 to 100 and serves to control the animation.
 
     [NonSerialized] public float easedValue = 0.0f; // The value when evaluated against the animator curve.
 
     [NonSerialized] public float value = 0.0f; // The values that are meant to be read ; the eased value modulated by magnitude.
     [NonSerialized] public float valueInv = 1.0f;
 
-    public void LauchAnim () {
+    public virtual void LaunchAnim () {
         isActive = true;
         animationSlider = 0.0f;
         Update();
     }
 
-    public void PauseAnim () {
+    public virtual void PauseAnim () {
         isActive = false;
     }
 
-    public void ResumeAnim () {
+    public virtual void ResumeAnim () {
         isActive = true;
     }
 
-    public void Update () {
+    public abstract void Update ();
+}
+
+[Serializable] public class OnceAnimator : AutoAnimator {
+
+    public override void Update () {
 
         if (!isActive) {
             return; 
@@ -162,7 +166,7 @@ using UnityEngine;
 
 public class WallCollisionHandler : MonoBehaviour
 {
-    public AutoAnimator bumpAnimator;
+    public OnceAnimator bumpAnimator;
     private Vector3 baseLocalScale;
     public SlingshotMovement bacteria;
 
@@ -194,7 +198,7 @@ public class WallCollisionHandler : MonoBehaviour
         if (!bumpAnimator.isActive)
         {
             bumpAnimator.magnitude = 0.05f * Mathf.Min(collision.relativeVelocity.magnitude, 5.0f)/5.0f;
-            bumpAnimator.LauchAnim();
+            bumpAnimator.LaunchAnim();
         }
     }
 }
