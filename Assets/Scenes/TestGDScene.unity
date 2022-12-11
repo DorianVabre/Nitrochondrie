@@ -1000,8 +1000,8 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras:
-  - {fileID: 749782924}
   - {fileID: 1102118502}
+  - {fileID: 749782924}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -1293,6 +1293,7 @@ GameObject:
   - component: {fileID: 749782923}
   - component: {fileID: 749782922}
   - component: {fileID: 749782921}
+  - component: {fileID: 749782926}
   m_Layer: 0
   m_Name: Virus Overlay Camera
   m_TagString: MainCamera
@@ -1396,7 +1397,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1427,6 +1428,129 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &749782926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749782920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26426980c5ac9dd48b0aa6ba46db2967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overlayAnimator:
+    animationSpeed: 3
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.087422825
+        value: 0.43200678
+        inSlope: 3.9149845
+        outSlope: 3.9149845
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.16310753
+        value: 0.06354308
+        inSlope: 1.7172484
+        outSlope: 1.7172484
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.23377696
+        value: 0.70831496
+        inSlope: 2.8549404
+        outSlope: 2.8549404
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.34770223
+        value: 0.33696643
+        inSlope: -0.02254871
+        outSlope: -0.02254871
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.20419228
+      - serializedVersion: 3
+        time: 0.52455515
+        value: 1
+        inSlope: 0.010957434
+        outSlope: 0.010957434
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.08969891
+      - serializedVersion: 3
+        time: 0.63028336
+        value: 0.13288426
+        inSlope: -2.5682628
+        outSlope: -2.5682628
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.75448376
+        value: 0.65464795
+        inSlope: -2.3146255
+        outSlope: -2.3146255
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8159256
+        value: 0.18117096
+        inSlope: -3.5644708
+        outSlope: -3.5644708
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.89800054
+        value: 0.38009906
+        inSlope: -1.3962878
+        outSlope: -1.3962878
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    magnitude: 1
+  minSize: 4.6
+  maxSize: 4.9
+  overlayCamera: {fileID: 749782924}
 --- !u!1001 &774986596
 PrefabInstance:
   m_ObjectHideFlags: 0
