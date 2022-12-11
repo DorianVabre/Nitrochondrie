@@ -18,6 +18,7 @@ public class SlingshotMovement : MonoBehaviour
 
     private Vector2 currentMovementInput = Vector2.zero;
     private Vector2 lastMovementInput = Vector2.zero;
+    public float minMagnitudeDeltaToTriggerPropel = 0.2f;
 
     // FOR MOUSE ONLY, CAN BE DELETED AFTER CONTROLLER DONE
     private Vector3 initialPosition;
@@ -74,20 +75,25 @@ public class SlingshotMovement : MonoBehaviour
         arrowLine.SetActive(true);
         arrowHead.SetActive(true);
 
+        Vector2 deltaInput = currentMovementInput - lastMovementInput;
+
         // Moving the bacteria
-        if (Mathf.Abs(currentMovementInput.x) <= deadZone && Mathf.Abs(currentMovementInput.y) <= deadZone) {
-            arrowLine.SetActive(false);
-            arrowHead.SetActive(false);
-            if (lastMovementInput.x != 0 && lastMovementInput.y != 0) {
-                Propel(lastMovementInput * -1);
-                Debug.Log("propel!!!");
-                currentTimeSinceLastMove = 0;
-                lastMovementInput = Vector2.zero;
+        if (Vector2.Dot(deltaInput, currentMovementInput) <= 0) {
+            // Either the movement towards the idle joystick is enough OR the current movement is slow and back to idle
+            if (deltaInput.magnitude >= minMagnitudeDeltaToTriggerPropel || currentMovementInput.magnitude <= deadZone) {
+                arrowLine.SetActive(false);
+                arrowHead.SetActive(false);
+                if (lastMovementInput.x != 0 || lastMovementInput.y != 0) {
+                    Propel(lastMovementInput * -1);
+                    currentTimeSinceLastMove = 0;
+                    lastMovementInput = Vector2.zero;
+                }
+            } else {
+                lastMovementInput = currentMovementInput;
             }
         } else {
             lastMovementInput = currentMovementInput;
         }
-
     }
 
     // Applying the force to the rigidbody and resets the input
