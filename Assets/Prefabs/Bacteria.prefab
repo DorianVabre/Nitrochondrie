@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4936734748685834049}
   - component: {fileID: 4936734748685834062}
   - component: {fileID: 4936734748641301788}
-  - component: {fileID: 4936734748685834063}
-  - component: {fileID: 339401195935941187}
+  - component: {fileID: 7456041683284867841}
+  - component: {fileID: 175638607482776851}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 99
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowLine: {fileID: 4936734748880788557}
   arrowHead: {fileID: 4936734748800654255}
-  bacteriaRigidBody: {fileID: 300148041322350744}
+  bacteriaRigidBody: {fileID: 7456041683284867841}
   sling:
     chargeCurve:
       serializedVersion: 2
@@ -112,8 +112,8 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 2
-        outSlope: 2
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
@@ -121,8 +121,8 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: 2
+        outSlope: 2
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   forceMultiplier: 300
   deadZone: 0.02
   lerpSpeed: 8
---- !u!50 &4936734748685834063
+--- !u!50 &7456041683284867841
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -158,15 +158,15 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.75
+  m_LinearDrag: 0
   m_AngularDrag: 0.8
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 39cb3d5c919f9d04eaa1a0ec45516e14, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!70 &339401195935941187
+--- !u!70 &175638607482776851
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,8 +179,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.34253827, y: -0.009516311}
-  m_Size: {x: 0.60037714, y: 0.3625074}
+  m_Offset: {x: 0.33354577, y: -0.0021385355}
+  m_Size: {x: 0.5894838, y: 0.37140137}
   m_Direction: 1
 --- !u!1 &4936734748800654255
 GameObject:
@@ -738,10 +738,5 @@ PrefabInstance:
 --- !u!4 &261470946366812793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6249765972382358972, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
-  m_PrefabInstance: {fileID: 6132582706026639301}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &300148041322350744 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 5850484290636719965, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
   m_PrefabInstance: {fileID: 6132582706026639301}
   m_PrefabAsset: {fileID: 0}
