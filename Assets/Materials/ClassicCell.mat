@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Triplanar
+  m_Name: ClassicCell
   m_Shader: {fileID: -6465566751694194690, guid: 4ed1e1c6a8bc1b24a9c31970c8d8956d, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -20,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2DLOD_b54aeda6feb54cfea9dde4c55139f06e_Texture_1:
+        m_Texture: {fileID: 2800000, guid: cbdfe13decb9db14eae2e7f0fa3e49c9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TemplateTexture:
         m_Texture: {fileID: 2800000, guid: 370c911d5ad92c645a5fe10bdee85267, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -52,6 +56,8 @@ Material:
     m_Floats:
     - _BlendSharpness: 1.55
     - _DisplacePower: 0.59
+    - _IsBackground: 0
+    - _PulseSpeed: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Speed: 1.82
