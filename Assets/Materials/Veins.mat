@@ -54,6 +54,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BaseTilling: 30
+    - _BigSphere: 0
     - _BlendSharpness: 1.55
     - _DisplacePower: 120
     - _IsBackground: 1

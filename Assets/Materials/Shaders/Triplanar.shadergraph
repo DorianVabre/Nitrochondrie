@@ -35,6 +35,9 @@
         },
         {
             "m_Id": "7863345e0acd42918f0959bfed97e411"
+        },
+        {
+            "m_Id": "906551f9eb614723b5ace6364e04d7df"
         }
     ],
     "m_Keywords": [],
@@ -206,6 +209,9 @@
         },
         {
             "m_Id": "831a1c1c2382494b859faef2e9d9af47"
+        },
+        {
+            "m_Id": "7b574876119a41cd906edf5175a076f4"
         }
     ],
     "m_GroupDatas": [],
@@ -559,6 +565,20 @@
                     "m_Id": "2465fcd6a00e4ed9904dfeb888a6d264"
                 },
                 "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "7b574876119a41cd906edf5175a076f4"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "53bf19b97d584227901eafbcf0c87481"
+                },
+                "m_SlotId": -807000554
             }
         },
         {
@@ -2495,6 +2515,21 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "3dd769250a914d8384fc9035191bd16c",
+    "m_Id": 0,
+    "m_DisplayName": "BaseTilling",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "4200a99344124b4884a4a9cb5c1ad04a",
     "m_Id": -853328056,
     "m_DisplayName": "AngleOffset",
@@ -3844,6 +3879,41 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "7b574876119a41cd906edf5175a076f4",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 187.0,
+            "y": 21.99996566772461,
+            "width": 132.0,
+            "height": 34.000022888183597
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "3dd769250a914d8384fc9035191bd16c"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "906551f9eb614723b5ace6364e04d7df"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "7e55707a348d463a962cdfec07e46b1d",
     "m_Id": 1,
@@ -4258,6 +4328,33 @@
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "906551f9eb614723b5ace6364e04d7df",
+    "m_Guid": {
+        "m_GuidSerialized": "16fb9de3-fbcf-46c4-87a3-99cd6b592f1f"
+    },
+    "m_Name": "BaseTilling",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "BaseTilling",
+    "m_DefaultReferenceName": "_BaseTilling",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 82.80000305175781,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
     }
 }
 
@@ -5241,6 +5338,9 @@
         },
         {
             "m_Id": "7863345e0acd42918f0959bfed97e411"
+        },
+        {
+            "m_Id": "906551f9eb614723b5ace6364e04d7df"
         }
     ]
 }
