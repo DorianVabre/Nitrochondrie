@@ -10,6 +10,7 @@ public class WallCollisionHandler : MonoBehaviour
     public AnimationCurve bumpMinScaleIntensityCurve;
     public AnimationCurve bumpMaxScaleIntensityCurve;
 
+    public GameObject objectToBump;
     public CameraShaker cameraShaker;
 
     private Vector3 _baseLocalScale;
@@ -19,13 +20,13 @@ public class WallCollisionHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _baseLocalScale = transform.localScale;
+        _baseLocalScale = objectToBump.transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = (_currentMinScaleFactor * bumpAnimator.valueInv
+        objectToBump.transform.localScale = (_currentMinScaleFactor * bumpAnimator.valueInv
                                 + _currentMaxScaleFactor * bumpAnimator.value)
                                 * _baseLocalScale;
         bumpAnimator.Update();
