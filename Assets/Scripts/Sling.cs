@@ -82,6 +82,8 @@ public class Sling {
         _timeSinceFullChargeSeconds = 0.0f;
         _isInCooldown = true;
         mustFire = false;
+
+        UpdateAccessValue();
     }
 
     public void Update(Vector2 movementVector) {
@@ -107,10 +109,13 @@ public class Sling {
             _timeSinceChargeStartSeconds += Time.deltaTime;
         }
 
+        UpdateAccessValue();
+        accessVector = (-1.0f) * accessValue * strength * movementVector.normalized;
+    }
+
+    void UpdateAccessValue() {
         accessValue = chargeCurve.Evaluate(_timeSinceChargeStartSeconds / timeToFullChargeSeconds);
         accessValueInv = 1.0f - chargeCurve.Evaluate(_timeSinceChargeStartSeconds / timeToFullChargeSeconds);
-
-        accessVector = (-1.0f) * accessValue * strength * movementVector.normalized;
     }
 
 }

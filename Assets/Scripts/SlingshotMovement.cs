@@ -29,7 +29,7 @@ public class SlingshotMovement : MonoBehaviour
     void Update()
     {
         sling.Update(currentMovementInputVector);
-
+        
         if (sling.mustFire) {
             arrowLine.SetActive(false);
             arrowHead.SetActive(false);
