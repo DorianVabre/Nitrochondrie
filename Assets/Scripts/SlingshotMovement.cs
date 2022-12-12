@@ -25,6 +25,8 @@ public class SlingshotMovement : MonoBehaviour
     private bool isDragging;
 
     private void Awake() {
+        InputSystem.pollingFrequency = 120;
+
         rb = GetComponent<Rigidbody2D>();
         foreach(Transform transform in transform) {
             if (transform.name == "ArrowHead") {
@@ -53,16 +55,8 @@ public class SlingshotMovement : MonoBehaviour
             // Updating initial position
             initialPosition = transform.position;
         }
-    }
 
-    public void OnMove(InputAction.CallbackContext context) {
-        if (currentTimeSinceLastMove < timeBetweenMovements) {
-            return;
-        }
-
-        currentMovementInput = context.ReadValue<Vector2>();
-        
-        // Moving the direction arrowLine
+                // Moving the direction arrowLine
         Vector2 vectorForDirectionArrow = currentMovementInput * -1;
         float angle = Mathf.Atan2(vectorForDirectionArrow.y, vectorForDirectionArrow.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -94,6 +88,14 @@ public class SlingshotMovement : MonoBehaviour
         } else {
             lastMovementInput = currentMovementInput;
         }
+    }
+
+    public void OnMove(InputAction.CallbackContext context) {
+        if (currentTimeSinceLastMove < timeBetweenMovements) {
+            return;
+        }
+
+        currentMovementInput = context.ReadValue<Vector2>();
     }
 
     // Applying the force to the rigidbody and resets the input
