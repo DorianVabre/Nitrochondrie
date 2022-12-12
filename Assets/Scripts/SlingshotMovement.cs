@@ -13,6 +13,7 @@ public class SlingshotMovement : MonoBehaviour
 
     public float forceMultiplier = 100;
     public float deadZone = 0.02f;
+    public float lerpSpeed = 8f;
 
     private Vector2 currentMovementInputVector = Vector2.zero;
 
@@ -35,20 +36,20 @@ public class SlingshotMovement : MonoBehaviour
             Propel();
         }
 
-        UpdateArrow();
+        UpdateRotation();
     }
 
-    void UpdateArrow() {
-        // Moving the direction arrowLine
-        Vector2 vectorForDirectionArrow = currentMovementInputVector * -1;
-        float angle = Mathf.Atan2(vectorForDirectionArrow.y, vectorForDirectionArrow.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
+    void UpdateRotation() {
         // Scaling the line
         Vector2 localScale = new Vector2(sling.accessValue, 1);
         arrowLine.transform.localScale = localScale;
 
         if (sling.accessValue > 0) {
+            // Moving the direction arrowLine
+            Vector2 vectorForDirectionArrow = currentMovementInputVector * -1;
+            float angle = Mathf.Atan2(vectorForDirectionArrow.y, vectorForDirectionArrow.x) * Mathf.Rad2Deg;
+            //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * lerpSpeed);
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             arrowLine.SetActive(true);
             arrowHead.SetActive(true);
         } else {

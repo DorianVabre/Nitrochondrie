@@ -12,11 +12,9 @@ public class PlayerAnimation : MonoBehaviour
 
     Vector2 currentMovementInput;
     Vector3 footForce;
-    Quaternion rota;
     [SerializeField] int firstIntsToMove;
 
-    [SerializeField] float lengh = 5f;
-    [SerializeField] float lenghPos = 5f;
+    [SerializeField] float length = 5f;
 
     [SerializeField] float lerpSpeed = 5f;
 
@@ -50,11 +48,9 @@ public class PlayerAnimation : MonoBehaviour
             }
         }
 
-        center.rotation = Quaternion.Lerp(center.rotation, rota, Time.deltaTime * lerpSpeed);
-
         foreach (Rigidbody item in list)
         {
-            item.AddForce(footForce * Time.deltaTime * lengh);
+            item.AddForce(footForce * Time.deltaTime * length);
         }
         foreach (Transform item in movableList)
         {
@@ -77,11 +73,5 @@ public class PlayerAnimation : MonoBehaviour
         currentMovementInput = context.ReadValue<Vector2>();
 
         footForce = new Vector3(currentMovementInput.x, 0, currentMovementInput.y);
-
-        if (currentMovementInput.magnitude >= 0.2f)
-        {
-            centerDummy.LookAt(footForce * lengh + center.position, Vector3.up);
-            rota = Quaternion.Euler(new Vector3(center.rotation.eulerAngles.x, centerDummy.rotation.eulerAngles.y, center.rotation.eulerAngles.z));
-        }
     }
 }
