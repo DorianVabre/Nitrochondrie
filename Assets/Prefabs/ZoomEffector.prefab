@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 4237750490127539387}
   - component: {fileID: 4237750490127539384}
   - component: {fileID: 4237750490127539385}
-  - component: {fileID: 4237750490127539365}
+  - component: {fileID: 3353108550831638809}
   m_Layer: 7
   m_Name: ZoomEffector
   m_TagString: Untagged
@@ -218,7 +218,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4237750490127539365
+--- !u!114 &3353108550831638809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,66 +227,66 @@ MonoBehaviour:
   m_GameObject: {fileID: 4237750490127539390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf818dec220f2c34cb2fc7cdf2eb698d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2538a4cc6382bd344ad8a9120e85bfdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   zoomInAnimator:
-    animationSpeed: 31.85
+    animationSpeed: 20
     curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 0.9998324
+        outSlope: 0.9998324
         tangentMode: 0
-        weightedMode: 0
+        weightedMode: 2
         inWeight: 0
-        outWeight: 0
+        outWeight: 0.64910656
       - serializedVersion: 3
-        time: 0.27032742
-        value: 0.97978973
-        inSlope: 0.7958307
-        outSlope: 0.7958307
+        time: 0.16689608
+        value: 1.0013564
+        inSlope: 0.0768164
+        outSlope: 0.0768164
         tangentMode: 0
-        weightedMode: 0
+        weightedMode: 3
         inWeight: 0.33333334
-        outWeight: 0.12384192
+        outWeight: 0.41370815
       - serializedVersion: 3
-        time: 0.59505504
-        value: 0.94702977
-        inSlope: 0.013436761
-        outSlope: 0.013436761
+        time: 0.4684869
+        value: 0.8796436
+        inSlope: -0.18445592
+        outSlope: -0.18445592
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.8961696
-        value: 0.80565727
-        inSlope: -3.86005
-        outSlope: -3.86005
+        time: 0.7810385
+        value: 1
+        inSlope: -0.04033465
+        outSlope: -0.04033465
         tangentMode: 0
-        weightedMode: 0
+        weightedMode: 3
         inWeight: 0.33333334
-        outWeight: 0.17009571
+        outWeight: 0.61941564
       - serializedVersion: 3
         time: 1
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: -0.66606224
+        outSlope: -0.66606224
         tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
+        weightedMode: 1
+        inWeight: 0.7801982
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     magnitude: 1
   minSize: 0.02
-  maxSize: 3.5
-  baseScaleVector: {x: 1, y: 1, z: 0.02}
+  maxSize: 6
+  baseScaleVector: {x: 1, y: 1, z: 0.005}
 --- !u!1 &4237750490579414272
 GameObject:
   m_ObjectHideFlags: 0
