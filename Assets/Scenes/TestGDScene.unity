@@ -1646,6 +1646,46 @@ PrefabInstance:
       propertyPath: deadZone
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.deadzone
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.strength
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.cooldownSeconds
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.deadzoneFireThreshold
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.timeToFullChargeSeconds
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.timeInDeadzoneToTriggerSeconds
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.timeAtFullChargeToTriggerSeconds
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4936734750203165417, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
       propertyPath: m_Name
       value: Bacteria
@@ -2309,6 +2349,10 @@ PrefabInstance:
       propertyPath: deadZone
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+      propertyPath: bacteriaRigidBody
+      value: 
+      objectReference: {fileID: 1157675877}
     - target: {fileID: 4936734750203165417, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
       propertyPath: m_Name
       value: Bacteria2
@@ -2370,6 +2414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1139287585c82a4893ef34583ca2a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1157675877 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4936734748685834063, guid: f7edf55bd0e833e4090a16d7f64d9174, type: 3}
+  m_PrefabInstance: {fileID: 1157675873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1201978468
 GameObject:
   m_ObjectHideFlags: 0
