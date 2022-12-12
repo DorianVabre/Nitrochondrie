@@ -624,6 +624,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4936734748641301788, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936734748641301788, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4936734750203165417, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_Name
       value: Player 1

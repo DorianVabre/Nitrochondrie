@@ -95,6 +95,8 @@ public class Sling {
             return;
         }
 
+        UpdateAccessValue();
+
         if (vectorMagnitude < deadzone) {
             InputInDeadzone ();
             return;
@@ -109,7 +111,6 @@ public class Sling {
             _timeSinceChargeStartSeconds += Time.deltaTime;
         }
 
-        UpdateAccessValue();
         accessVector = (-1.0f) * accessValue * strength * movementVector.normalized;
     }
 

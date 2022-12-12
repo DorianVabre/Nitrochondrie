@@ -29,17 +29,13 @@ public class SlingshotMovement : MonoBehaviour
     void Update()
     {
         sling.Update(currentMovementInputVector);
-        
+
         if (sling.mustFire) {
-            arrowLine.SetActive(false);
-            arrowHead.SetActive(false);
             sling.Fire();
             Propel();
-        } else if (sling.accessValue != 0) {
-            UpdateArrow();
-            arrowLine.SetActive(true);
-            arrowHead.SetActive(true);
         }
+
+        UpdateArrow();
     }
 
     void UpdateArrow() {
@@ -51,6 +47,14 @@ public class SlingshotMovement : MonoBehaviour
         // Scaling the line
         Vector2 localScale = new Vector2(sling.accessValue, 1);
         arrowLine.transform.localScale = localScale;
+
+        if (sling.accessValue > 0) {
+            arrowLine.SetActive(true);
+            arrowHead.SetActive(true);
+        } else {
+            arrowLine.SetActive(false);
+            arrowHead.SetActive(false);
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context) {
