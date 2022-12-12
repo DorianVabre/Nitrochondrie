@@ -147,6 +147,7 @@ MonoBehaviour:
   currentTimeSinceLastMove: 0
   forceMultiplier: 300
   deadZone: 0.02
+  minMagnitudeDeltaToTriggerPropel: 0.2
 --- !u!50 &4936734748685834063
 Rigidbody2D:
   serializedVersion: 4
@@ -424,7 +425,7 @@ GameObject:
   - component: {fileID: 4936734750378816270}
   m_Layer: 0
   m_Name: Bacteria
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
