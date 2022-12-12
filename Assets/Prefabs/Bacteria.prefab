@@ -101,50 +101,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1139287585c82a4893ef34583ca2a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -1.0002841
-      value: -1.0091531
-      inSlope: 0.6786138
-      outSlope: 0.6786138
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: -0.25
-      value: -0.5
-      inSlope: 1.3357067
-      outSlope: 1.3357067
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.25
-      value: 0.49639976
-      inSlope: 1.3321333
-      outSlope: 1.3321333
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0.671467
-      outSlope: 0.671467
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  timeBetweenMovements: 0.25
-  currentTimeSinceLastMove: 0
+  arrowLine: {fileID: 4936734748880788557}
+  arrowHead: {fileID: 4936734748800654255}
+  bacteriaRigidBody: {fileID: 4936734748685834063}
+  sling:
+    chargeCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    timeToFullChargeSeconds: 0.5
+    strength: 800
+    deadzone: 0.8
+    deadzoneFireThreshold: 0.2
+    cooldownSeconds: 0.1
+    timeInDeadzoneToTriggerSeconds: 0.01
+    timeAtFullChargeToTriggerSeconds: 1.6
+    mustFire: 0
+    vectorMagnitude: 0
+    _timeSinceChargeStartSeconds: 0
+    _timeSinceFullChargeSeconds: 0
+    _timeSinceDeadZoneSeconds: 0
   forceMultiplier: 300
   deadZone: 0.02
 --- !u!50 &4936734748685834063
@@ -424,7 +420,7 @@ GameObject:
   - component: {fileID: 4936734750378816270}
   m_Layer: 0
   m_Name: Bacteria
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
