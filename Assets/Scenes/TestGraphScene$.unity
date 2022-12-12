@@ -3109,6 +3109,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 367021173289737377, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: stretchPower
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6249765972382358972, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
       propertyPath: m_RootOrder
       value: 3
