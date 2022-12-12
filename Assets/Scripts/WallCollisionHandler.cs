@@ -5,21 +5,29 @@ using UnityEngine;
 public class WallCollisionHandler : MonoBehaviour
 {
     public OnceAnimator bumpAnimator;
-    private Vector3 baseLocalScale;
     public SlingshotMovement bacteria;
 
+    public AnimationCurve bumpMinScaleIntensityCurve;
+    public AnimationCurve bumpMaxScaleIntensityCurve;
+
     public CameraShaker cameraShaker;
+
+    private Vector3 _baseLocalScale;
+    private float _currentMinScaleFactor = 1.0f;
+    private float _currentMaxScaleFactor = 1.5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        baseLocalScale = transform.localScale;
+        _baseLocalScale = transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = baseLocalScale * (1.0f + bumpAnimator.value);
+        transform.localScale = (_currentMinScaleFactor * bumpAnimator.valueInv
+                                + _currentMaxScaleFactor * bumpAnimator.value)
+                                * _baseLocalScale;
         bumpAnimator.Update();
     }
 
@@ -31,11 +39,14 @@ public class WallCollisionHandler : MonoBehaviour
             return;
         }
 
-        cameraShaker.LaunchShake(Mathf.Min(Mathf.Abs(collision.relativeVelocity.magnitude), 5.0f)/5.0f);
+        float intensityFactor = Mathf.Min(collision.relativeVelocity.magnitude, 5.0f) / 5.0f;
+
+        cameraShaker.LaunchShake(intensityFactor);
+        _currentMinScaleFactor = bumpMinScaleIntensityCurve.Evaluate(intensityFactor);
+        _currentMaxScaleFactor = bumpMaxScaleIntensityCurve.Evaluate(intensityFactor);
 
         if (!bumpAnimator.isActive)
         {
-            bumpAnimator.magnitude = 0.05f * Mathf.Min(collision.relativeVelocity.magnitude, 5.0f)/5.0f;
             bumpAnimator.LaunchAnim();
         }
     }
