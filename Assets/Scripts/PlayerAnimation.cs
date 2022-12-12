@@ -23,6 +23,8 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] float stretchPower = 2f;
     [SerializeField] float stretchSpeed = 2f;
 
+    [SerializeField] SkinnedMeshRenderer skinnedMesh;
+
     Animator anim;
     bool canTrigger = true;
 
@@ -60,6 +62,8 @@ public class PlayerAnimation : MonoBehaviour
             item.localPosition = Vector3.Lerp(item.localPosition, desiredLegPosition, Time.deltaTime * stretchSpeed);
 
         }
+
+        skinnedMesh.SetBlendShapeWeight(1, currentMovementInput.magnitude * 100f);
     }
 
     public void TriggerAnim()
