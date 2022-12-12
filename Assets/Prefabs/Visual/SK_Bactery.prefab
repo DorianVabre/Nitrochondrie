@@ -1155,9 +1155,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.0022607553
-  m_Height: 0.008794194
+  m_Height: 0.0072078276
   m_Direction: 1
-  m_Center: {x: -0.000040234656, y: 0.0073943636, z: -5.150626e-11}
+  m_Center: {x: -0.000040234896, y: 0.008187533, z: -1.2336575e-10}
 --- !u!144 &5850484290694281036
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1266,9 +1266,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.0021310619
-  m_Height: 0.00818052
+  m_Height: 0.0066315997
   m_Direction: 1
-  m_Center: {x: -0.000009200167, y: 0.0077010817, z: -4.4281037e-10}
+  m_Center: {x: -0.00000919896, y: 0.008475525, z: -5.786162e-10}
 --- !u!144 &5850484292276557732
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1593,7 +1593,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6769035200192890630}
-  m_LocalRotation: {x: -0.7071066, y: -0, z: -0, w: 0.70710707}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -11.700434, y: 1.0913775, z: 13.197744}
   m_LocalScale: {x: 0.2419926, y: 0.2419926, z: 0.2419926}
   m_ConstrainProportionsScale: 0
@@ -1620,17 +1620,16 @@ MonoBehaviour:
   - {fileID: 5850484292149012401}
   - {fileID: 5850484290968066095}
   - {fileID: 5850484291770512145}
-  movableList:
-  - {fileID: 1499429497594166462}
-  - {fileID: 3575989517418577180}
+  movableList: []
   centerDummy: {fileID: 5850484292032571387}
   center: {fileID: 4771700331243302358}
   firstIntsToMove: 2
   lengh: 2500
   lenghPos: 20
   lerpSpeed: 5
-  stretchPower: 5
+  stretchPower: 1.25
   stretchSpeed: 20
+  skinnedMesh: {fileID: 367021173289737377}
 --- !u!95 &1818477229663243037
 Animator:
   serializedVersion: 4
@@ -1850,6 +1849,7 @@ SkinnedMeshRenderer:
   - {fileID: 3205484803520693988}
   - {fileID: 3575989517418577180}
   m_BlendShapeWeights:
+  - 0
   - 0
   m_RootBone: {fileID: 4771700331243302358}
   m_AABB:
