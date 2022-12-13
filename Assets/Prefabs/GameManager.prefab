@@ -5036,9 +5036,10 @@ GameObject:
   - component: {fileID: 4788897450939672108}
   - component: {fileID: 4788897450939672109}
   - component: {fileID: 1646598228757765543}
+  - component: {fileID: 1084598435}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5088,6 +5089,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 4788897450799354991}
   transitionTime: 1.5
+--- !u!114 &1084598435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788897450939672106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599c5e5fd941644449ae9cdbf06963fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1Checkpoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  player2Checkpoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  checkpointLapEnd: {fileID: 0}
+  lapsToWin: 3
+  amountOfCheckpoints: 0
+  checkpointsReachedByP1: 0
+  lapsDoneByP1: 0
+  checkpointsReachedByP2: 0
+  lapsDoneByP2: 0
 --- !u!1 &4788897451006320308
 GameObject:
   m_ObjectHideFlags: 0

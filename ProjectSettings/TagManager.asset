@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Goal
+  - Player1
+  - Player2
+  - CheckpointManager
   layers:
   - Default
   - TransparentFX

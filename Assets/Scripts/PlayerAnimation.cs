@@ -16,8 +16,6 @@ public class PlayerAnimation : MonoBehaviour
 
     [SerializeField] float length = 5f;
 
-    [SerializeField] float lerpSpeed = 5f;
-
     [SerializeField] float stretchPower = 2f;
     [SerializeField] float stretchSpeed = 2f;
 
