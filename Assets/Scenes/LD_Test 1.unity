@@ -1304,6 +1304,7 @@ MonoBehaviour:
   m_Cameras:
   - {fileID: 2079732850}
   - {fileID: 1241736643}
+  - {fileID: 1084598436}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -2875,6 +2876,10 @@ PrefabInstance:
       propertyPath: playerTwo
       value: 
       objectReference: {fileID: 1648615029}
+    - target: {fileID: 8807747105102302316, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
 --- !u!1 &1084598434 stripped
