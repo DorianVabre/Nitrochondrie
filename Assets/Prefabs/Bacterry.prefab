@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 4936734748641301788}
   - component: {fileID: 7456041683284867841}
   - component: {fileID: 175638607482776851}
+  - component: {fileID: 1393515500}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -419,6 +420,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.33354577, y: -0.0021385355}
   m_Size: {x: 0.5894838, y: 0.37140137}
   m_Direction: 1
+--- !u!114 &1393515500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936734748685834050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34d45e445c122342b1158d3956df65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  speedThresholdBeforeSpeedyAnim: 2
 --- !u!1 &4936734748800654255
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +645,7 @@ GameObject:
   - component: {fileID: 4936734750378816270}
   m_Layer: 0
   m_Name: Bacterry
-  m_TagString: Player
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
