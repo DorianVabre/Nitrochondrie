@@ -7,6 +7,7 @@ public class SlingshotMovement : MonoBehaviour
 {
     public GameObject arrowLine;
     public GameObject arrowHead;
+    public SFXManager sfxManager;
     
     public Rigidbody2D bacteriaRigidBody;
     public Sling sling;
@@ -30,6 +31,9 @@ public class SlingshotMovement : MonoBehaviour
     void Update()
     {
         sling.Update(currentMovementInputVector);
+        if(sling.accessValue > 0.2f){
+            sfxManager.PlayRandomStretch();
+        }
 
         if (sling.mustFire) {
             sling.Fire();
@@ -66,5 +70,7 @@ public class SlingshotMovement : MonoBehaviour
         bacteriaRigidBody.velocity = Vector3.zero;
         bacteriaRigidBody.angularVelocity = 0;
         bacteriaRigidBody.AddForce(sling.accessVector);
+        sfxManager.PlayRandomRelease();
+        sfxManager.PlayRandomLaunch();
     }
 }
