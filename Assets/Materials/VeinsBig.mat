@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BigSphere
+  m_Name: VeinsBig
   m_Shader: {fileID: -6465566751694194690, guid: 4ed1e1c6a8bc1b24a9c31970c8d8956d, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -54,17 +54,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BaseTilling: 5.6
-    - _BigSphere: 1
+    - _BaseTilling: 6
+    - _BigSphere: 0
     - _BlendSharpness: 1.55
-    - _CellDensityDisplacement: 13.41
-    - _DisplacePower: 20
+    - _CellDensityDisplacement: 295.25
+    - _DisplacePower: 333.33334
     - _IsBackground: 1
     - _ObjCoord: 0
-    - _PulseSpeed: 2
+    - _PulseSpeed: 5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 0.001
+    - _Speed: 1.82
     - _Tilling: 0.04
     m_Colors:
     - _MinMaxRough: {r: 0.6, g: 0.75, b: 0, a: 0}
