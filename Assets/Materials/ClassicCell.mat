@@ -58,7 +58,7 @@ Material:
     - _BigSphere: 0
     - _BlendSharpness: 1.55
     - _CellDensityDisplacement: 5
-    - _DisplacePower: 35
+    - _DisplacePower: 55
     - _IsBackground: 0
     - _ObjCoord: 0
     - _PulseSpeed: 1
