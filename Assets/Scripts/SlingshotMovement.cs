@@ -48,8 +48,8 @@ public class SlingshotMovement : MonoBehaviour
             // Moving the direction arrowLine
             Vector2 vectorForDirectionArrow = currentMovementInputVector * -1;
             float angle = Mathf.Atan2(vectorForDirectionArrow.y, vectorForDirectionArrow.x) * Mathf.Rad2Deg;
-            //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * lerpSpeed);
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * lerpSpeed);
+            //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             arrowLine.SetActive(true);
             arrowHead.SetActive(true);
         } else {

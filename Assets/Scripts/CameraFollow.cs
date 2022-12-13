@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     private float zPos;
     public Transform player1;
     public Transform player2;
-    public float coefBetweenPlayerDistanceAndDezoom = 0.3f;
+    public float coefBetweenPlayerDistanceAndDezoom = 0.15f;
     public float moveSpeed = 1f;
 
     void Start() {
