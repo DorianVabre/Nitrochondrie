@@ -6,15 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: a1e0d204c625662419f0f78367caec35
+    path: Assets/Scenes/LD_Tuto.unity
+    guid: 04513c090da0d6a4a8c234d2ef8708f4
   - enabled: 1
     path: Assets/Scenes/LD_Test 1.unity
     guid: f95553bb3d91de54fb9f3a665abb509f
-  - enabled: 1
-    path: Assets/Scenes/Level01.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
-    path: Assets/Scenes/TestGraphScene$.unity
-    guid: bbb101175fe75e642adee6b32e9b750b
   m_configObjects: {}
