@@ -1220,7 +1220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672108, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672108, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1298,6 +1298,11 @@ MonoBehaviour:
   lapsDoneByP1: 0
   checkpointsReachedByP2: 0
   lapsDoneByP2: 0
+--- !u!20 &1084598436 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8807747105102302316, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+  m_PrefabInstance: {fileID: 1084598433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1085350065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,7 +1454,8 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: []
+  m_Cameras:
+  - {fileID: 1084598436}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
