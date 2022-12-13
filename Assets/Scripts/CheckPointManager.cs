@@ -17,19 +17,25 @@ public class CheckPointManager : MonoBehaviour
 
     public int checkpointsReachedByP2;
     public int lapsDoneByP2;
+    private GameManager gm;
 
 
     void Start() {
         amountOfCheckpoints = player1Checkpoints.Count;
         checkpointsReachedByP1 = checkpointsReachedByP2 = 0;
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     public void AddCheckpointP1() {
         checkpointsReachedByP1++;
+        gm.CheckMusicChange(lapsDoneByP1, lapsDoneByP2,
+                            checkpointsReachedByP1, checkpointsReachedByP2);
     }
 
     public void AddCheckpointP2() {
         checkpointsReachedByP2++;
+        gm.CheckMusicChange(lapsDoneByP1, lapsDoneByP2,
+                            checkpointsReachedByP1, checkpointsReachedByP2);
     }
 
     public void CheckLapP1() {
