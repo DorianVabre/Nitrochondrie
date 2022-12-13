@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        lapMusic[0].volume = 1f;
         for (int i = 1; i < lapMusic.Length; i++){
             lapMusic[i].volume = 0f;
         }

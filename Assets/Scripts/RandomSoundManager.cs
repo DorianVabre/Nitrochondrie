@@ -2,47 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomSoundManager : MonoBehaviour {
+[System.Serializable]
+public class RandomSoundManager {
     [SerializeField] private AudioClip[] playlist;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private int playlistSize;
-    [SerializeField] private int lastPlayedIndex;
-    [SerializeField] private float lastSoundTime;
-    [SerializeField] private float randomSecondsBetweenSounds;
-    [SerializeField] private float minimumSecondsBetweenSounds;
-    [SerializeField] private float maximumSecondsBetweenSounds;
+    [SerializeField] private float randomPitchMin = 1.0f;
+    [SerializeField] private float randomPitchMax = 1.0f;
 
-    void Start() {
-        playlistSize = playlist.Length;
-        audioSource.clip = playlist[0];
-        lastPlayedIndex = 0;
+    private bool onCooldown = false;
 
-        lastSoundTime = Time.time;
-        randomSecondsBetweenSounds = Random.Range(minimumSecondsBetweenSounds, maximumSecondsBetweenSounds);
+    private float cooldownDuration = 0f;
+    private float cooldownTimer = 0f;
 
-        audioSource.Play();
-    }
-
-    void Update() {
-        if (!audioSource.isPlaying && lastSoundTime + randomSecondsBetweenSounds < Time.time) {
-            lastSoundTime = Time.time;
-            randomSecondsBetweenSounds = Random.Range(minimumSecondsBetweenSounds, maximumSecondsBetweenSounds);
-            PlayNextSound();
+    public void Update(){
+        cooldownTimer += Time.deltaTime;
+        if(cooldownTimer >= cooldownDuration ){
+            onCooldown = false;
         }
     }
 
-    void PlayNextSound() {
-        float randomPitch = Random.Range(0.75f, 1.25f);
-        
-        int soundIndex = Random.Range(0, playlistSize);
-        while (soundIndex == lastPlayedIndex) {
-            soundIndex = Random.Range(0, playlistSize);
+    public void PlayRandomSound(bool isOverride = false, float delay = 0f) {
+        if(onCooldown && !isOverride){
+            return;
         }
-        lastPlayedIndex = soundIndex;
-        
-        audioSource.clip = playlist[soundIndex];
+
+        float randomPitch = Random.Range(randomPitchMin, randomPitchMax);
+        int soundIndex = Random.Range(0, playlist.Length);
+
         audioSource.pitch = randomPitch;
-        
+        audioSource.clip = playlist[soundIndex];
+
+        cooldownDuration = audioSource.clip.length;
+        cooldownTimer = 0f;
+        onCooldown = true;
+
+        audioSource.PlayDelayed(delay);
+    }
+
+    public void StopCooldown(){
+        onCooldown = false;
+    }
+
+    public void PlaySound(int index) {
+        float randomPitch = Random.Range(randomPitchMin, randomPitchMax);
+
+        audioSource.pitch = randomPitch;
+        audioSource.clip = playlist[index];
         audioSource.Play();
     }
 }

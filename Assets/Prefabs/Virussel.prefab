@@ -183,6 +183,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHurt.playlist.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: lapVoices.playlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 972f5c153fafe3e45b24d4aecd57a0f4, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: lapVoices.playlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 715ed9ff482b16349983f5aaf9a5b69f, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHurt.playlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 900618493a894214b825264f9125f359, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHurt.playlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: c18b9b960c0efbb4baa3ed6720f8f106, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHurt.playlist.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ec7a993e221c9243aa206fb6394a338, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f734be57ddf7e984384c4593916b9835, type: 3}
 --- !u!4 &8620348669195480677 stripped
