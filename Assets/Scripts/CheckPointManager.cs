@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CheckPointManager : MonoBehaviour
 {
@@ -12,9 +13,11 @@ public class CheckPointManager : MonoBehaviour
     public int lapsToWin = 3;
     public int amountOfCheckpoints;
 
+    public TextMeshProUGUI lapsP1;
     public int checkpointsReachedByP1;
     public int lapsDoneByP1;
 
+    public TextMeshProUGUI lapsP2;
     public int checkpointsReachedByP2;
     public int lapsDoneByP2;
     private GameManager gm;
@@ -23,6 +26,8 @@ public class CheckPointManager : MonoBehaviour
     void Start() {
         amountOfCheckpoints = player1Checkpoints.Count;
         checkpointsReachedByP1 = checkpointsReachedByP2 = 0;
+        lapsP1.text = "Lap 1/" + lapsToWin;
+        lapsP2.text = "Lap 1/" + lapsToWin;
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
@@ -41,16 +46,20 @@ public class CheckPointManager : MonoBehaviour
     public void CheckLapP1() {
         if (checkpointsReachedByP1 == amountOfCheckpoints) {
             lapsDoneByP1++;
+            int numberToPrint = lapsDoneByP1 + 1;
             ResetCheckpointsForP1();
             CheckVictory();
+            lapsP1.text = "Lap " + numberToPrint + "/" + lapsToWin;
         }
     }
 
     public void CheckLapP2() {
         if (checkpointsReachedByP2 == amountOfCheckpoints) {
             lapsDoneByP2++;
+            int numberToPrint = lapsDoneByP2 + 1;
             ResetCheckpointsForP2();
             CheckVictory();
+            lapsP2.text = "Lap " + numberToPrint + "/" + lapsToWin;
         }
     }
 
