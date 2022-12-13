@@ -49,9 +49,9 @@ public class CheckPointManager : MonoBehaviour
     }
 
     void CheckVictory() {
-        if (checkpointsReachedByP1 >= amountOfCheckpoints) {
+        if (lapsDoneByP1 >= lapsToWin) {
             Debug.Log("P1 wins");
-        } else if (checkpointsReachedByP2 >= amountOfCheckpoints) {
+        } else if (lapsDoneByP2 >= lapsToWin) {
             Debug.Log("P2 wins");           
         }
     }
@@ -59,12 +59,14 @@ public class CheckPointManager : MonoBehaviour
     void ResetCheckpointsForP1() {
         foreach(Transform checkpoint in player1Checkpoints) {
             checkpoint.GetComponent<Checkpoint>().hasBeenReachedByP1 = false;
+            checkpointsReachedByP1 = 0;
         }
     }
 
     void ResetCheckpointsForP2() {
         foreach(Transform checkpoint in player2Checkpoints) {
             checkpoint.GetComponent<Checkpoint>().hasBeenReachedByP2 = false;
+            checkpointsReachedByP2 = 0;
         }
     }
 }

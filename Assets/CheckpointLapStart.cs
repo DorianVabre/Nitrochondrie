@@ -5,7 +5,7 @@ public class CheckpointLapStart : MonoBehaviour
     private CheckPointManager cpm;
 
     void Start() {
-        cpm = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckPointManager>();
+        cpm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<CheckPointManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
