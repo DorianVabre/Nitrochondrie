@@ -9,11 +9,12 @@ TagManager:
   - Player2
   - CheckpointManager
   - GameManager
+  - UI
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcess
   - Water
   - UI
   - VirusOverlay
