@@ -57,8 +57,8 @@ Material:
     - _BaseTilling: 5.6
     - _BigSphere: 1
     - _BlendSharpness: 1.55
-    - _CellDensityDisplacement: 0.1
-    - _DisplacePower: 35
+    - _CellDensityDisplacement: 5.1
+    - _DisplacePower: 26.86
     - _IsBackground: 1
     - _ObjCoord: 0
     - _PulseSpeed: 2
