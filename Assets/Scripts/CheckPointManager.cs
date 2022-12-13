@@ -53,20 +53,22 @@ public class CheckPointManager : MonoBehaviour
     public void CheckLapP1() {
         if (checkpointsReachedByP1 == amountOfCheckpoints) {
             lapsDoneByP1++;
-            int numberToPrint = lapsDoneByP1 + 1;
             ResetCheckpointsForP1();
             CheckVictory();
-            lapsP1.text = "Lap " + numberToPrint + "/" + lapsToWin;
+            int numberToPrint = lapsDoneByP1 + 1;
+            if (numberToPrint <= lapsToWin)
+                lapsP1.text = "Lap " + numberToPrint + "/" + lapsToWin;
         }
     }
 
     public void CheckLapP2() {
         if (checkpointsReachedByP2 == amountOfCheckpoints) {
             lapsDoneByP2++;
-            int numberToPrint = lapsDoneByP2 + 1;
             ResetCheckpointsForP2();
             CheckVictory();
-            lapsP2.text = "Lap " + numberToPrint + "/" + lapsToWin;
+            int numberToPrint = lapsDoneByP2 + 1;
+            if (numberToPrint <= lapsToWin)
+                lapsP2.text = "Lap " + numberToPrint + "/" + lapsToWin;
         }
     }
 
