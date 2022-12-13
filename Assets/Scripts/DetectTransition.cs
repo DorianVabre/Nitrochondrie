@@ -12,7 +12,7 @@ public class DetectTransition : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.transform.parent.tag == "Player"){
+        if(other.transform.parent.CompareTag("Player")){
             other.attachedRigidbody.bodyType = RigidbodyType2D.Static;
             other.attachedRigidbody.simulated = false;
             arrived++;
