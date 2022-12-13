@@ -2271,17 +2271,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1393515500, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 851331877}
     - target: {fileID: 4936734750203165417, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_Name
       value: Bacterry
       objectReference: {fileID: 0}
-    - target: {fileID: 4936734750203165417, guid: f734be57ddf7e984384c4593916b9835, type: 3}
-      propertyPath: m_TagString
-      value: Player1
-      objectReference: {fileID: 0}
     - target: {fileID: 4936734750378816270, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4936734750378816270, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2473,6 +2473,11 @@ Transform:
   m_Father: {fileID: 1978534480}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &851331877 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1350529991, guid: 37ccf2d31940e7c4cb24c39d297f8303, type: 3}
+  m_PrefabInstance: {fileID: 1910050585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &854858650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3555,7 +3560,7 @@ MonoBehaviour:
   - {fileID: 150515949}
   - {fileID: 841376089}
   checkpointLapEnd: {fileID: 2402513560711024126}
-  lapsToWin: 3
+  lapsToWin: 1
   amountOfCheckpoints: 0
   lapsP1: {fileID: 302245558}
   checkpointsReachedByP1: 0
@@ -4191,6 +4196,11 @@ Transform:
   m_Father: {fileID: 547946309}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 63.78, y: 48.819, z: 68.235}
+--- !u!95 &1365951866 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1895234768, guid: 961675d93522c8a42bc30eaabda404ac, type: 3}
+  m_PrefabInstance: {fileID: 1504365818}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1378464178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1016557048550619239, guid: 163ba2b8870265240aa1c6abeb96aa78, type: 3}
@@ -4698,6 +4708,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3684911414429360840, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1365951866}
     - target: {fileID: 8620348669615442474, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -4745,10 +4759,6 @@ PrefabInstance:
     - target: {fileID: 8620348669792142285, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
       propertyPath: m_Name
       value: Virussel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8620348669792142285, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
-      propertyPath: m_TagString
-      value: Player2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
@@ -5271,7 +5281,7 @@ Transform:
   - {fileID: 1073246789}
   - {fileID: 26011364}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!1001 &1823620941
 PrefabInstance:

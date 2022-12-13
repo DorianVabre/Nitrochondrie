@@ -8,6 +8,9 @@ public class CheckPointManager : MonoBehaviour
     public List<Transform> player1Checkpoints;
     public List<Transform> player2Checkpoints;
 
+    PortraitAnimatorManager portraitP1;
+    PortraitAnimatorManager portraitP2;
+
     public Transform checkpointLapEnd;
 
     public int lapsToWin = 3;
@@ -22,6 +25,10 @@ public class CheckPointManager : MonoBehaviour
     public int lapsDoneByP2;
     private GameManager gm;
 
+    private void Awake() {
+        portraitP1 = GameObject.FindGameObjectWithTag("Player1").GetComponentInChildren<PortraitAnimatorManager>();
+        portraitP2 = GameObject.FindGameObjectWithTag("Player2").GetComponentInChildren<PortraitAnimatorManager>();
+    }
 
     void Start() {
         amountOfCheckpoints = player1Checkpoints.Count;
@@ -65,11 +72,13 @@ public class CheckPointManager : MonoBehaviour
 
     void CheckVictory() {
         if (lapsDoneByP1 >= lapsToWin) {
-            Debug.Log("P1 wins");
-            Time.timeScale = 0f;
+            portraitP1.SetVictory(true);
+            portraitP2.SetVictory(false);
+            Time.timeScale = 0.4f;
         } else if (lapsDoneByP2 >= lapsToWin) {
-            Debug.Log("P2 wins");
-            Time.timeScale = 0f;
+            portraitP1.SetVictory(false);
+            portraitP2.SetVictory(true);
+            Time.timeScale = 0.4f;
         }
     }
 
