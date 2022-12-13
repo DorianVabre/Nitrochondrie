@@ -1583,7 +1583,7 @@ MonoBehaviour:
   - {fileID: 3130755479969629491}
   movableList: []
   firstIntsToMove: 2
-  length: 5
+  length: 4000
   stretchPower: 1.25
   stretchSpeed: 20
   skinnedMesh: {fileID: 3130755480372089893}

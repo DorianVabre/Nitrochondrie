@@ -1621,11 +1621,8 @@ MonoBehaviour:
   - {fileID: 5850484290968066095}
   - {fileID: 5850484291770512145}
   movableList: []
-  centerDummy: {fileID: 5850484292032571387}
-  center: {fileID: 4771700331243302358}
   firstIntsToMove: 2
-  length: 5
-  lerpSpeed: 5
+  length: 4000
   stretchPower: 1.25
   stretchSpeed: 20
   skinnedMesh: {fileID: 367021173289737377}
