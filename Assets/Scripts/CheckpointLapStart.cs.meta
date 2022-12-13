@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/CheckpointLapStart.cs.meta
 guid: 3e12f4e9c4e384142b50694dea30ea38
+========
+guid: 9693e610c54f49c4e999ea84b0758e69
+>>>>>>>> origin/fae-gamefeel-2:Assets/CollisionHandler.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/CheckpointLapStart.cs.meta
+guid: af35e75cd6a338142b5051dd60f501f0
+========
+guid: 9693e610c54f49c4e999ea84b0758e69
+>>>>>>>> origin/fae-gamefeel-2:Assets/CollisionHandler.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

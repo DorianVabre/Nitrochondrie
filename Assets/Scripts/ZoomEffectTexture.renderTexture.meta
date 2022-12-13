@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/Characters/Virussel/Idle.anim.meta
+guid: 41aad0cbb013a5e42ab1ab761ba46cbe
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+========
+guid: 69f4a6205bcb21542b30d134e27e0360
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+>>>>>>>> origin/fae-gamefeel-2:Assets/Scripts/ZoomEffectTexture.renderTexture.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

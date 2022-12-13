@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/CheckpointLapStart.prefab.meta
 guid: 12d2f60a6729022489cdf05bc8c7b4bf
+========
+guid: db95e89004267e6408ea6f575327d160
+>>>>>>>> origin/fae-gamefeel-2:Assets/Prefabs/Virus Overlay Camera.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

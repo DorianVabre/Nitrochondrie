@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Checkpoint.cs.meta
 guid: 71032aba10c6a6945aef7ea103c3769a
+========
+guid: 06fda47b3e49ee942a3bed5b6e3b6cf7
+>>>>>>>> origin/fae-gamefeel-2:Assets/CameraMovementController.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
