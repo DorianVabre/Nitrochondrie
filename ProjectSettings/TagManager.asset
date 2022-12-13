@@ -5,17 +5,21 @@ TagManager:
   serializedVersion: 2
   tags:
   - Goal
+  - Player1
+  - Player2
+  - CheckpointManager
+  - GameManager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - postProcess
+  - 
   - Water
   - UI
-  - BacteriaLimb
-  - Terrain
-  - 
-  - 
+  - VirusOverlay
+  - ZoomEffect
+  - ParticleLayer
+  - Background
   - 
   - 
   - 

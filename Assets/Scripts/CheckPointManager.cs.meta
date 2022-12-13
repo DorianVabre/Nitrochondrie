@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/CheckPointManager.cs.meta
+guid: 599c5e5fd941644449ae9cdbf06963fc
+========
+guid: 04e9e444261b1c44d936b6051c04deef
+>>>>>>>> origin/fae-gamefeel-2:Assets/Scripts/CameraShaker.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

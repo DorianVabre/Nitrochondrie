@@ -174,7 +174,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 223
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -217,7 +217,8 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: []
+  m_Cameras:
+  - {fileID: 1070899385}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -246,8 +247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be3bf1fad2f1ba4aa079ca041cc2747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!114 &122246467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,16 +259,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454db3a6b8130e04fb963a28aec154b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
+--- !u!114 &188458496 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 300148041272917070, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+  m_PrefabInstance: {fileID: 956857876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917457973c508314cab4f621af32aaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &462339821
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,63 +459,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4936734750378816270, guid: f734be57ddf7e984384c4593916b9835, type: 3}
   m_PrefabInstance: {fileID: 956857876}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &862656994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 862656996}
-  - component: {fileID: 862656995}
-  m_Layer: 0
-  m_Name: WwiseGlobal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &862656995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862656994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b766c5a0c7e05447890c6dfb9b0f560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: 9ee0bad438270d742ab96d6339fd7055, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
---- !u!4 &862656996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862656994}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &956857876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -533,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4936734750378816270, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4936734750378816270, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_LocalPosition.x
@@ -660,6 +603,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1037847417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 300148041272917070, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+  m_PrefabInstance: {fileID: 1291094063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917457973c508314cab4f621af32aaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!20 &1070899385 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8807747105102302316, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+  m_PrefabInstance: {fileID: 4788897449513084105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1291094063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -677,7 +636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4936734750378816270, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4936734750378816270, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_LocalPosition.x
@@ -788,6 +747,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1037847417}
+        m_TargetAssemblyTypeName: PlayerAnimation, Assembly-CSharp
+        m_MethodName: MoveBody
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4d25a0a7-544a-46df-adc9-24a6b5de94df
     m_ActionName: Bacteria/MoveFirstBacteria[/XInputControllerWindows/leftStick]
   - m_PersistentCalls:
@@ -795,6 +766,18 @@ MonoBehaviour:
       - m_Target: {fileID: 956857877}
         m_TargetAssemblyTypeName: SlingshotMovement, Assembly-CSharp
         m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188458496}
+        m_TargetAssemblyTypeName: PlayerAnimation, Assembly-CSharp
+        m_MethodName: MoveBody
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -849,6 +832,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 824778990674313602, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 122246463}
     - target: {fileID: 4788897450799354976, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_Camera
       value: 
@@ -871,7 +858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672108, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672108, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_LocalPosition.z

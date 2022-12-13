@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/Decals/Textures.meta
 guid: 406b498051a98414eb5f1d31b2d85fe1
 folderAsset: yes
 DefaultImporter:
+========
+guid: 806066cf097e6064ebbfa7bb0680ac4b
+NativeFormatImporter:
+>>>>>>>> origin/fae-gamefeel-2:Assets/Scripts/Materials/ZoomEffectTexture.mat.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

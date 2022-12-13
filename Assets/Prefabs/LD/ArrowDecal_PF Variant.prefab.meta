@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/LD/ArrowDecal_PF Variant.prefab.meta
 guid: 14838e0cd64c9e740b6efaf66e9ceeec
+========
+guid: 14afa030fedfa6a4cac603a35bb757b3
+>>>>>>>> origin/fae-gamefeel-2:Assets/Prefabs/Wall.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
