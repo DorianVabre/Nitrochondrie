@@ -174,7 +174,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -643,7 +643,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.19, y: 2.04}
+  m_Size: {x: 18, y: 2.04}
   m_EdgeRadius: 0
 --- !u!4 &983810054
 Transform:
@@ -849,6 +849,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4788897450799354976, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 122246463}
+    - target: {fileID: 4788897450799354976, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672106, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -909,9 +917,13 @@ PrefabInstance:
       propertyPath: playerTwo
       value: 
       objectReference: {fileID: 655550984}
-    - target: {fileID: 4818372340249812901, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
+    - target: {fileID: 4788897451006320311, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4788897451006320311, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000015258789
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
