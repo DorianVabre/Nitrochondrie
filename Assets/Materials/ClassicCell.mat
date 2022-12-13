@@ -54,9 +54,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BaseTilling: 82.8
+    - _BigSphere: 0
     - _BlendSharpness: 1.55
-    - _DisplacePower: 0.59
+    - _CellDensityDisplacement: 5
+    - _DisplacePower: 35
     - _IsBackground: 0
+    - _ObjCoord: 0
     - _PulseSpeed: 1
     - _QueueControl: 0
     - _QueueOffset: 0
