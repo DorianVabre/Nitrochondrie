@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2402513561801023618
+--- !u!1 &3155369484251386021
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2402513561801023623}
-  - component: {fileID: 2402513561801023616}
-  - component: {fileID: 750034899049055145}
+  - component: {fileID: 3155369484251386016}
+  - component: {fileID: 3155369484251386023}
+  - component: {fileID: 8500308429219281615}
   m_Layer: 0
-  m_Name: Checkpoint
+  m_Name: CheckpointLapStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2402513561801023623
+--- !u!4 &3155369484251386016
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2402513561801023618}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.38, y: -7.61, z: 0}
+  m_GameObject: {fileID: 3155369484251386021}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -29.65, y: -6.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &2402513561801023616
+--- !u!58 &3155369484251386023
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2402513561801023618}
+  m_GameObject: {fileID: 3155369484251386021}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -49,17 +49,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &750034899049055145
+--- !u!114 &8500308429219281615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2402513561801023618}
+  m_GameObject: {fileID: 3155369484251386021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71032aba10c6a6945aef7ea103c3769a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e12f4e9c4e384142b50694dea30ea38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenReachedByP1: 0
-  hasBeenReachedByP2: 0
