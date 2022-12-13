@@ -21,7 +21,7 @@ public class CameraShaker : MonoBehaviour
     public bool isShaking = false;
 
     public void Start() {
-        originPosition = cameraHolder.transform.position;
+        originPosition = cameraHolder.transform.localPosition;
     }
 
     public void Cooldown () {
@@ -55,7 +55,7 @@ public class CameraShaker : MonoBehaviour
         }
 
         isShaking = true;
-        originPosition = cameraHolder.transform.position;
+        originPosition = cameraHolder.transform.localPosition;
     }
 
     public void LateUpdate () {
@@ -72,13 +72,13 @@ public class CameraShaker : MonoBehaviour
 
         if (!wiggler.isActive) {
             isShaking = false;
-            cameraHolder.transform.position = originPosition;
+            cameraHolder.transform.localPosition = originPosition;
             return;
         }
 
         wiggler.Update();
 
-        cameraHolder.transform.position = originPosition
+        cameraHolder.transform.localPosition = originPosition
         + wiggler.wiggleAccessValue * intensityMuterCurve.Evaluate(_intensityDecayerSeconds);
     }
 }
