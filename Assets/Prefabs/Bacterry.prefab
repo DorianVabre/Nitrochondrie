@@ -131,7 +131,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     timeToFullChargeSeconds: 0.5
-    strength: 800
+    strength: 400
     deadzone: 0.8
     deadzoneFireThreshold: 0.2
     cooldownSeconds: 0.1
