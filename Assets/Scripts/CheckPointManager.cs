@@ -57,8 +57,10 @@ public class CheckPointManager : MonoBehaviour
     void CheckVictory() {
         if (lapsDoneByP1 >= lapsToWin) {
             Debug.Log("P1 wins");
+            Time.timeScale = 0f;
         } else if (lapsDoneByP2 >= lapsToWin) {
-            Debug.Log("P2 wins");           
+            Debug.Log("P2 wins");
+            Time.timeScale = 0f;
         }
     }
 
