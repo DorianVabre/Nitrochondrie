@@ -64,7 +64,7 @@ Material:
     - _PulseSpeed: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 2.54
+    - _Speed: 2.34
     - _Tilling: 0.04
     m_Colors:
     - _MinMaxRough: {r: 0.6, g: 0.75, b: 0, a: 0}

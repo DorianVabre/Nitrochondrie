@@ -57,15 +57,15 @@ Material:
     - _BaseTilling: 5.6
     - _BigSphere: 1
     - _BlendSharpness: 1.55
-    - _CellDensityDisplacement: 7.7
+    - _CellDensityDisplacement: 0.77
     - _DisplacePower: 13.3
     - _IsBackground: 1
     - _ObjCoord: 0
     - _PulseSpeed: 2
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 0.001
-    - _Tilling: 0.04
+    - _Speed: 1.52
+    - _Tilling: 0.5
     m_Colors:
     - _MinMaxRough: {r: 0.6, g: 0.75, b: 0, a: 0}
     - _Tint: {r: 0.8773585, g: 0.45186326, b: 0.40970984, a: 0}
