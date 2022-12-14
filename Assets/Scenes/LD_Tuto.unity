@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   v: {fileID: 233212384}
   cam: {fileID: 1601034435}
-  baseFDOffset: 0.58
+  baseFDOffset: 0.75
   basePos: 0
 --- !u!114 &233212384 stripped
 MonoBehaviour:
@@ -11908,38 +11908,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884352338}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &884645533 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4585601082581324529, guid: d64d96e634d174147821e813e0068d41, type: 3}
-  m_PrefabInstance: {fileID: 220852255}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &884645534 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4585601082581324528, guid: d64d96e634d174147821e813e0068d41, type: 3}
-  m_PrefabInstance: {fileID: 220852255}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884645533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &884645536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884645533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6796514f1990bba40ba1b65cfad9f0a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  v: {fileID: 884645534}
-  cam: {fileID: 1601034435}
-  baseFDOffset: 0.75
-  basePos: 0
 --- !u!1 &888740745
 GameObject:
   m_ObjectHideFlags: 0
@@ -18701,7 +18669,7 @@ PrefabInstance:
     - target: {fileID: 1646598228757765543, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: musicSource
       value: 
-      objectReference: {fileID: 1895556203}
+      objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672106, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -18777,7 +18745,7 @@ PrefabInstance:
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: lapMusic.Array.data[0]
       value: 
-      objectReference: {fileID: 1895556203}
+      objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: lapMusic.Array.data[1]
       value: 
