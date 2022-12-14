@@ -18740,10 +18740,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1646598228757765543, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
-      propertyPath: musicSource
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672106, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_Name
       value: GameManager
