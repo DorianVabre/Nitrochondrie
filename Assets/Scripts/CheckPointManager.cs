@@ -41,15 +41,13 @@ public class CheckPointManager : MonoBehaviour
     public void AddCheckpointP1() {
         checkpointsReachedByP1++;
         UpdatePositions();
-        gm.CheckMusicChange(lapsDoneByP1, lapsDoneByP2,
-                            checkpointsReachedByP1, checkpointsReachedByP2);
+        gm.CheckMusicChange(checkpointsReachedByP1, checkpointsReachedByP2);
     }
 
     public void AddCheckpointP2() {
         checkpointsReachedByP2++;
         UpdatePositions();
-        gm.CheckMusicChange(lapsDoneByP1, lapsDoneByP2,
-                            checkpointsReachedByP1, checkpointsReachedByP2);
+        gm.CheckMusicChange(checkpointsReachedByP1, checkpointsReachedByP2);
     }
 
     public void CheckLapP1() {
