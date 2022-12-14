@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     private float startTimerLimit;
     public GameObject inputManager;
     private bool raceStarted;
+    public AudioSource countdownSound;
+    private bool countdownSoundPlayed;
 
     private void Awake() {
         cpm = GetComponent<CheckPointManager>();
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
         startTimer = 0f;
         startTimerLimit = 4.2f;
         raceStarted = false;
+        countdownSoundPlayed = false;
     }
 
     void Update() {
@@ -61,6 +64,11 @@ public class GameManager : MonoBehaviour
                 StartRace();
                 raceStarted = true;
             }
+            if(startTimer >= 1.2f && !countdownSoundPlayed){
+                countdownSound.Play();
+                countdownSoundPlayed = true;
+            }
+            
         }
     }
 
@@ -79,7 +87,6 @@ public class GameManager : MonoBehaviour
             if(inputManager){
                 inputManager.SetActive(true);
             }
-            Debug.Log("AAAAAAAA");
         }
     }
 
