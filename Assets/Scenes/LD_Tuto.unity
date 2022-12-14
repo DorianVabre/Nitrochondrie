@@ -668,8 +668,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1393515500, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f734be57ddf7e984384c4593916b9835, type: 3}
 --- !u!114 &149687841 stripped
 MonoBehaviour:
@@ -2279,7 +2278,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 111566ba896a3ae4191a42ab841358f5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3d9357b6a8ee45e43a5f34ed834f9112, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -11767,6 +11766,17 @@ Transform:
   m_Father: {fileID: 1863366145}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841214937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+  m_PrefabInstance: {fileID: 149687840}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a3ab07610aa7347870f79dd7727038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &850401288
 GameObject:
   m_ObjectHideFlags: 0
@@ -12706,6 +12716,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6042659225961307879, guid: 991ebc7fc54ed0548a8b13ece57d1bd0, type: 3}
   m_PrefabInstance: {fileID: 959237369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &993107093 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7314903297505482345, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+  m_PrefabInstance: {fileID: 1731032391}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &997919501
 PrefabInstance:
@@ -15289,6 +15304,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245349041}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1263921314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7694004748084578818, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
+  m_PrefabInstance: {fileID: 1292261562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a3ab07610aa7347870f79dd7727038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1273532075
 GameObject:
   m_ObjectHideFlags: 0
@@ -15441,12 +15467,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Virussel
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3684911414429360840, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
 --- !u!114 &1292261563 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2876967402109637317, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2330569595829517956, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
   m_PrefabInstance: {fileID: 1292261562}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -18797,6 +18822,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2134005351}
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: sfxManagerP1
+      value: 
+      objectReference: {fileID: 841214937}
+    - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: sfxManagerP2
+      value: 
+      objectReference: {fileID: 1263921314}
+    - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: thirdLayerMaxVolume
       value: 0
       objectReference: {fileID: 0}
@@ -18815,7 +18848,7 @@ PrefabInstance:
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: lapMusic.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 993107093}
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: lapMusic.Array.data[1]
       value: 

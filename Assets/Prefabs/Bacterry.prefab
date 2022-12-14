@@ -51,60 +51,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomHurt:
     playlist:
-    - {fileID: 8300000, guid: 025324b51e03d1b44b54509c474ad7cc, type: 3}
+    - {fileID: 8300000, guid: 2458ebcb6c64f034696e330cc8cdb8ca, type: 3}
+    - {fileID: 8300000, guid: e436d534395b5444482efdbaef2fb1cd, type: 3}
+    - {fileID: 8300000, guid: 4446fbbc866a6734bbd2f3dbdca3da8e, type: 3}
+    - {fileID: 8300000, guid: ca892175f1fd86d4881855f0d63fdd4a, type: 3}
+    - {fileID: 8300000, guid: d9b63ab6611a7364abd6ec81a3e0b15c, type: 3}
     audioSource: {fileID: 7483758970588921197}
     randomPitchMin: 0.7
     randomPitchMax: 1.2
   randomHitWalls:
     playlist:
-    - {fileID: 8300000, guid: df6f2089c031fd64e8138bfcf6c753fc, type: 3}
-    - {fileID: 8300000, guid: 66239f390ce4cb04e8c8179bbc07881b, type: 3}
-    - {fileID: 8300000, guid: c5751e362ca75e14eabfcf728b7f1574, type: 3}
-    - {fileID: 8300000, guid: 520d2c876288bd443994d28fcb8994e7, type: 3}
-    - {fileID: 8300000, guid: 9a811ed9c05b9c940982d1a34484aa4d, type: 3}
+    - {fileID: 8300000, guid: 5078a6e1ef85a9c49986c44e023f0617, type: 3}
+    - {fileID: 8300000, guid: 240b61ffaa7c167419c03d4ac0bfb33d, type: 3}
+    - {fileID: 8300000, guid: 13f13646e96203247ba82741e9796cf7, type: 3}
+    - {fileID: 8300000, guid: 079cbabcef7280d40a0bb57c32311a01, type: 3}
+    - {fileID: 8300000, guid: 4d2d03f410ea2ed4ebc0e48602085243, type: 3}
     audioSource: {fileID: 2027290199869086719}
     randomPitchMin: 0.7
     randomPitchMax: 1.2
   randomHitPlayer:
     playlist:
-    - {fileID: 8300000, guid: 079cd7b5bf1d2c744959b28c096e2554, type: 3}
-    - {fileID: 8300000, guid: db0f07644e8e7a944b82a041dac7ce9e, type: 3}
-    - {fileID: 8300000, guid: d1d1192fd179d774480c119f8f3c8866, type: 3}
-    - {fileID: 8300000, guid: b3c69be2c50d9ee469cc66a36026e587, type: 3}
-    - {fileID: 8300000, guid: 97df1e2b035e1944b9349cc86a5ab766, type: 3}
+    - {fileID: 8300000, guid: 5e2acb85343d51b44908bd40d83ccfeb, type: 3}
+    - {fileID: 8300000, guid: 43675f160e4959f4d8711ddb24bb1e92, type: 3}
+    - {fileID: 8300000, guid: a5727e2d928950d4ea0f5411fcdcea47, type: 3}
+    - {fileID: 8300000, guid: b022fbc65a5e5bc4dac9e50449e53961, type: 3}
+    - {fileID: 8300000, guid: a5ac9e6a6e7da134fb352f2d9ea2788b, type: 3}
     audioSource: {fileID: 4245155833370096034}
     randomPitchMin: 0.7
     randomPitchMax: 1.2
   randomStretch:
     playlist:
-    - {fileID: 8300000, guid: 4febe73975a3c504f81dcb4b26942abb, type: 3}
-    - {fileID: 8300000, guid: f167172ba23d76a4ea6bee13bf24714f, type: 3}
-    - {fileID: 8300000, guid: 5a4ee4a3332f81444873d9163cc22cc8, type: 3}
+    - {fileID: 8300000, guid: b5695b11a7972e148ba0c30bed065eca, type: 3}
+    - {fileID: 8300000, guid: 049135c4835700c47b23c970038e76d1, type: 3}
+    - {fileID: 8300000, guid: 07800f2ad9a3e7941aa5e06163510c3b, type: 3}
     audioSource: {fileID: 1794319890039291566}
     randomPitchMin: 0.7
     randomPitchMax: 1.2
   randomLaunch:
     playlist:
-    - {fileID: 8300000, guid: bcada64403e650b4e8c0a49c8e31ea09, type: 3}
-    - {fileID: 8300000, guid: 3df6c912efa28ef498228779bf7486c3, type: 3}
-    - {fileID: 8300000, guid: 37670710d9a9a434e9585e367a1adbd5, type: 3}
-    - {fileID: 8300000, guid: f9cdb632d85099144ab4fc09f98ea3a2, type: 3}
+    - {fileID: 8300000, guid: 5956cd1d5a4841447bd4522c2055ffbb, type: 3}
+    - {fileID: 8300000, guid: 2517e5084af6f9a4a9790737188b4c44, type: 3}
+    - {fileID: 8300000, guid: 2773bf4361402494082d76cd6a09e2a4, type: 3}
+    - {fileID: 8300000, guid: 41aa028e7e569264991da43f5d123cf6, type: 3}
     audioSource: {fileID: 7477251853621671673}
     randomPitchMin: 0.7
     randomPitchMax: 1.2
   randomRelease:
     playlist:
-    - {fileID: 8300000, guid: a95d8b39f4428fd4691586ab724d23af, type: 3}
-    - {fileID: 8300000, guid: 0f2d8ba514b7af949a06747fa49d4e53, type: 3}
-    - {fileID: 8300000, guid: 98292d7458d64dd4f8a4ba5ab6dd4bb8, type: 3}
-    - {fileID: 8300000, guid: 45ba9ebea7bf3c34298167efdaef2f86, type: 3}
+    - {fileID: 8300000, guid: f55dc94737a8d2e4db5d8b482d836dd4, type: 3}
+    - {fileID: 8300000, guid: 101c7582c6c5789448f8c23a83892095, type: 3}
+    - {fileID: 8300000, guid: 32cef0b4fc7b4294a8e04ca1b29ef799, type: 3}
+    - {fileID: 8300000, guid: d69cb1d3b34686e49b3dbcb671a83c91, type: 3}
     audioSource: {fileID: 1794319890039291566}
     randomPitchMin: 0.7
     randomPitchMax: 1.2
   lapVoices:
     playlist:
-    - {fileID: 8300000, guid: e4583e18cddb2424c8a110dbfe390697, type: 3}
-    - {fileID: 8300000, guid: 84aaf785f051ef243841016d9527bfb8, type: 3}
+    - {fileID: 8300000, guid: df09e09b9ffcb3c4a85a1752dbdb4373, type: 3}
+    - {fileID: 8300000, guid: 88a7272cec15b934680424119f903d66, type: 3}
     audioSource: {fileID: 7483758970588921197}
     randomPitchMin: 1
     randomPitchMax: 1
@@ -249,7 +253,6 @@ GameObject:
   - component: {fileID: 4936734748641301788}
   - component: {fileID: 7456041683284867841}
   - component: {fileID: 175638607482776851}
-  - component: {fileID: 1393515500}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -383,7 +386,8 @@ MonoBehaviour:
     _timeSinceDeadZoneSeconds: 0
   forceMultiplier: 300
   deadZone: 0.02
-  lerpSpeed: 8
+  lerpSpeed: 2
+  trailAnimator: {fileID: 2454387872971474761}
 --- !u!50 &7456041683284867841
 Rigidbody2D:
   serializedVersion: 4
@@ -421,20 +425,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.34218994, y: -0.0021385364}
   m_Size: {x: 0.4338861, y: 0.3714029}
   m_Direction: 1
---- !u!114 &1393515500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4936734748685834050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34d45e445c122342b1158d3956df65a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  speedThresholdBeforeSpeedyAnim: 2
 --- !u!1 &4936734748800654255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1232,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3169280781983405802, guid: e08e26f5af1ae514ca417800351ab1e8, type: 3}
   m_PrefabInstance: {fileID: 3003305082375777946}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2454387872971474761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 838336708064831955, guid: e08e26f5af1ae514ca417800351ab1e8, type: 3}
+  m_PrefabInstance: {fileID: 3003305082375777946}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b55c7b52e8df2479d6ef006125806f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6132582706026639301
 PrefabInstance:
   m_ObjectHideFlags: 0

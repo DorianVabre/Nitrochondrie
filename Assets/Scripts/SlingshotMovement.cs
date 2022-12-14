@@ -14,14 +14,14 @@ public class SlingshotMovement : MonoBehaviour
 
     public float forceMultiplier = 100;
     public float deadZone = 0.02f;
-    public float lerpSpeed = 8f;
+    public float lerpSpeed = 5f;
     
     public TrailAnimator trailAnimator;
 
     private Vector2 currentMovementInputVector = Vector2.zero;
 
     private void Awake() {
-        //InputSystem.pollingFrequency = 120;
+        InputSystem.pollingFrequency = 240;
         bacteriaRigidBody = GetComponent<Rigidbody2D>();
     }
 
@@ -41,7 +41,9 @@ public class SlingshotMovement : MonoBehaviour
             sling.Fire();
             Propel();
         }
+    }
 
+    private void FixedUpdate() {
         UpdateRotation();
     }
 
