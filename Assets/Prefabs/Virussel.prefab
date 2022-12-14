@@ -151,6 +151,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3600041997934347214, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: m_Range
+      value: 2.1859696
+      objectReference: {fileID: 0}
     - target: {fileID: 4936734750203165417, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_Name
       value: Virussel
@@ -223,6 +227,14 @@ PrefabInstance:
       propertyPath: randomHurt.playlist.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 9ec7a993e221c9243aa206fb6394a338, type: 3}
+    - target: {fileID: 6952652506670930013, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952652506670930013, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.534
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f734be57ddf7e984384c4593916b9835, type: 3}
 --- !u!4 &8620348669195480677 stripped
@@ -230,6 +242,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4936734748685834049, guid: f734be57ddf7e984384c4593916b9835, type: 3}
   m_PrefabInstance: {fileID: 3684911413640788260}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8620348669234834488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4936734748641301788, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+  m_PrefabInstance: {fileID: 3684911413640788260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1139287585c82a4893ef34583ca2a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6750543373215916354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -241,6 +264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_Virusell
       objectReference: {fileID: 0}
+    - target: {fileID: 8810085349611631495, guid: 5c4ae73c8741c1945858d3c19f0c621b, type: 3}
+      propertyPath: slmv
+      value: 
+      objectReference: {fileID: 8620348669234834488}
     - target: {fileID: 9063789535546572208, guid: 5c4ae73c8741c1945858d3c19f0c621b, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -1271,6 +1271,10 @@ PrefabInstance:
       value: 5.8207683e-10
       objectReference: {fileID: 0}
     - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: slmv
+      value: 
+      objectReference: {fileID: 4936734748641301788}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
       propertyPath: length
       value: 4000
       objectReference: {fileID: 0}
@@ -1281,6 +1285,54 @@ PrefabInstance:
     - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
       propertyPath: lerpSpeed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.deadzone
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.strength
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.cooldownSeconds
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.deadzoneFireThreshold
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.timeToFullChargeSeconds
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.timeInDeadzoneToTriggerSeconds
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.timeAtFullChargeToTriggerSeconds
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850484290587071371, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
+      propertyPath: sling.chargeCurve.m_Curve.Array.data[1].outSlope
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5850484290636719965, guid: 28d6d94afb2ffa843ad9ef668f99387d, type: 3}
       propertyPath: m_UseGravity
