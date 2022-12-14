@@ -57,7 +57,7 @@ public class SFXManager : MonoBehaviour
 
     }
 
-    public void PlayLapVoice(int index){
-        lapVoices.PlaySound(index);
+    public void PlayLapVoice(){
+        lapVoices.PlayRandomSound(true);
     }
 }

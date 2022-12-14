@@ -8,7 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform playerOne;
     [SerializeField] private Transform playerTwo;
 
+    [SerializeField] private SFXManager sfxManagerP1;
+    [SerializeField] private SFXManager sfxManagerP2;
+
     [SerializeField] private AudioSource[] lapMusic;
+    [SerializeField] private AudioSource[] quarterSounds;
 
     public TimerManager timerManager;
 
@@ -26,6 +30,10 @@ public class GameManager : MonoBehaviour
     public float thirdLayerMaxVolume = 0.77f;
     private float thirdLayerDeltaVolume;
     private int startCheckpointForThirdLayer;
+
+    private int firstQuarterCheckpoint;
+    private int secondQuarterCheckpoint;
+    private int thirdQuarterCheckpoint;
 
     public float volume1;
     public float volume2;
@@ -45,6 +53,10 @@ public class GameManager : MonoBehaviour
         startCheckpointForThirdLayer = amountOfCheckpoints * thirdLayerStartCheckpointReachedPercentage / 100;
         secondLayerDeltaVolume = secondLayerMaxVolume - secondLayerMinVolume;
         thirdLayerDeltaVolume = thirdLayerMaxVolume - thirdLayerMinVolume;
+
+        firstQuarterCheckpoint = (int)amountOfCheckpoints / 4;
+        secondQuarterCheckpoint = (int)amountOfCheckpoints / 2;
+        thirdQuarterCheckpoint = (int)amountOfCheckpoints * 3 / 4;
     }
 
     public void CheckMusicChange(int checkpointsReachedByP1, int checkpointsReachedByP2){
@@ -52,6 +64,8 @@ public class GameManager : MonoBehaviour
     }
 
     private void IncrementMusic(int bestCheckpoint){
+        ManageQuarters(bestCheckpoint);
+
         // Second layer management
         if (bestCheckpoint >= startCheckpointForSecondLayer) {
             // current progress in layer / total checkpoints in current layer --> percentage of the current layer
@@ -74,6 +88,30 @@ public class GameManager : MonoBehaviour
             }
             lapMusic[2].volume = volumeToSet;
             volume3 = lapMusic[2].volume;
+        }
+    }
+
+    private void ManageQuarters(int bestCheckpoint) {
+        if (bestCheckpoint == firstQuarterCheckpoint) {
+            quarterSounds[0].Play();
+            PlaySoundOfAheadPlayer();
+        } else if (bestCheckpoint == secondQuarterCheckpoint) {
+            quarterSounds[1].Play();
+            PlaySoundOfAheadPlayer();
+        } else if (bestCheckpoint == thirdQuarterCheckpoint) {
+            quarterSounds[2].Play();
+            PlaySoundOfAheadPlayer();
+        } else if (bestCheckpoint == amountOfCheckpoints) {
+            quarterSounds[3].Play();
+            PlaySoundOfAheadPlayer();
+        }
+    }
+
+    private void PlaySoundOfAheadPlayer() {
+        if (cpm.checkpointsReachedByP1 >= cpm.checkpointsReachedByP2) {
+            sfxManagerP1.PlayLapVoice();
+        } else {
+            sfxManagerP2.PlayLapVoice();
         }
     }
 }
