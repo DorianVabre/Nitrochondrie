@@ -38,8 +38,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Lerp: 0.89
+    - _Lerp: 0.97
     - _Speed: 2.78
+    - _Tilling: 0.41
     m_Colors:
     - _Color: {r: 0.9150943, g: 0.28057137, b: 0.30857158, a: 0}
   m_BuildTextureStacks: []
