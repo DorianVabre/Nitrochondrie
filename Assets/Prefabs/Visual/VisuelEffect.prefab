@@ -16527,9 +16527,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8300498714446137726}
     m_Modifications:
+    - target: {fileID: 4585601082581324528, guid: d64d96e634d174147821e813e0068d41, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4585601082581324529, guid: d64d96e634d174147821e813e0068d41, type: 3}
       propertyPath: m_Name
       value: PostProcess
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585601082581324529, guid: d64d96e634d174147821e813e0068d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4585601082581324531, guid: d64d96e634d174147821e813e0068d41, type: 3}
       propertyPath: m_RootOrder
@@ -16612,7 +16620,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   v: {fileID: 5517499405479277782}
   cam: {fileID: 0}
-  baseFD: 0
+  baseFDOffset: 0.3
+  basePos: 0
 --- !u!1001 &8354594135087108634
 PrefabInstance:
   m_ObjectHideFlags: 0
