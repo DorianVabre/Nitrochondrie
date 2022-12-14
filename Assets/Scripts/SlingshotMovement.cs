@@ -15,6 +15,8 @@ public class SlingshotMovement : MonoBehaviour
     public float forceMultiplier = 100;
     public float deadZone = 0.02f;
     public float lerpSpeed = 8f;
+    
+    public TrailAnimator trailAnimator;
 
     private Vector2 currentMovementInputVector = Vector2.zero;
 
@@ -72,5 +74,7 @@ public class SlingshotMovement : MonoBehaviour
         bacteriaRigidBody.AddForce(sling.accessVector);
         sfxManager.PlayRandomRelease();
         sfxManager.PlayRandomLaunch();
+
+        trailAnimator.LaunchTrail();
     }
 }
