@@ -16,14 +16,16 @@ public class CheckPointManager : MonoBehaviour
     public int lapsToWin = 3;
     public int amountOfCheckpoints;
 
-    public TextMeshProUGUI lapsP1;
+    public Transform positionP1;
     public int checkpointsReachedByP1;
     public int lapsDoneByP1;
 
-    public TextMeshProUGUI lapsP2;
+    public Transform positionP2;
     public int checkpointsReachedByP2;
     public int lapsDoneByP2;
     private GameManager gm;
+
+    private int whoIsAhead = 1;
 
     private void Awake() {
         portraitP1 = GameObject.FindGameObjectWithTag("Player1").GetComponentInChildren<PortraitAnimatorManager>();
@@ -33,19 +35,19 @@ public class CheckPointManager : MonoBehaviour
     void Start() {
         amountOfCheckpoints = player1Checkpoints.Count;
         checkpointsReachedByP1 = checkpointsReachedByP2 = 0;
-        lapsP1.text = "Lap 1/" + lapsToWin;
-        lapsP2.text = "Lap 1/" + lapsToWin;
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     public void AddCheckpointP1() {
         checkpointsReachedByP1++;
+        UpdatePositions();
         gm.CheckMusicChange(lapsDoneByP1, lapsDoneByP2,
                             checkpointsReachedByP1, checkpointsReachedByP2);
     }
 
     public void AddCheckpointP2() {
         checkpointsReachedByP2++;
+        UpdatePositions();
         gm.CheckMusicChange(lapsDoneByP1, lapsDoneByP2,
                             checkpointsReachedByP1, checkpointsReachedByP2);
     }
@@ -55,9 +57,6 @@ public class CheckPointManager : MonoBehaviour
             lapsDoneByP1++;
             ResetCheckpointsForP1();
             CheckVictory();
-            int numberToPrint = lapsDoneByP1 + 1;
-            if (numberToPrint <= lapsToWin)
-                lapsP1.text = "Lap " + numberToPrint + "/" + lapsToWin;
         }
     }
 
@@ -66,9 +65,6 @@ public class CheckPointManager : MonoBehaviour
             lapsDoneByP2++;
             ResetCheckpointsForP2();
             CheckVictory();
-            int numberToPrint = lapsDoneByP2 + 1;
-            if (numberToPrint <= lapsToWin)
-                lapsP2.text = "Lap " + numberToPrint + "/" + lapsToWin;
         }
     }
 
@@ -95,6 +91,31 @@ public class CheckPointManager : MonoBehaviour
         foreach(Transform checkpoint in player2Checkpoints) {
             checkpoint.GetComponent<Checkpoint>().hasBeenReachedByP2 = false;
             checkpointsReachedByP2 = 0;
+        }
+    }
+
+    void UpdatePositions() {
+
+        bool p1HasMoreCheckpoints = checkpointsReachedByP1 + amountOfCheckpoints * lapsDoneByP1 > checkpointsReachedByP2 + amountOfCheckpoints * lapsDoneByP2;
+        bool p2HasMoreCheckpoints = checkpointsReachedByP1 + amountOfCheckpoints * lapsDoneByP1 < checkpointsReachedByP2 + amountOfCheckpoints * lapsDoneByP2;
+
+        if (whoIsAhead == 2 && p2HasMoreCheckpoints) {
+            return;
+        }
+        if (whoIsAhead == 1 && p1HasMoreCheckpoints) {
+            return;
+        }
+
+        if (p1HasMoreCheckpoints) {
+            // p1 is ahead
+            whoIsAhead = 1;
+            positionP1.GetComponent<Animator>().SetBool("isWinnening", true);
+            positionP2.GetComponent<Animator>().SetBool("isWinnening", false);
+        } else if (p2HasMoreCheckpoints){
+            // p2 is ahead
+            whoIsAhead = 2;
+            positionP1.GetComponent<Animator>().SetBool("isWinnening", false);
+            positionP2.GetComponent<Animator>().SetBool("isWinnening", true);
         }
     }
 }
