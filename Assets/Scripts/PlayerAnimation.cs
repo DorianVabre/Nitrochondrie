@@ -9,6 +9,7 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] Transform[] movableList;
     [SerializeField] Transform centerDummy;
     [SerializeField] Transform center;
+    [SerializeField] SlingshotMovement slmv;
 
     Vector2 currentMovementInput;
     Vector3 footForce;
@@ -57,7 +58,7 @@ public class PlayerAnimation : MonoBehaviour
 
         }
 
-        skinnedMesh.SetBlendShapeWeight(1, currentMovementInput.magnitude * 100f);
+        skinnedMesh.SetBlendShapeWeight(1, slmv.sling.accessValue * 100f);
     }
 
     public void TriggerAnim()
@@ -69,7 +70,6 @@ public class PlayerAnimation : MonoBehaviour
     public void MoveBody(InputAction.CallbackContext context)
     {
         currentMovementInput = context.ReadValue<Vector2>();
-
         footForce = new Vector3(currentMovementInput.x, 0, currentMovementInput.y);
     }
 }
