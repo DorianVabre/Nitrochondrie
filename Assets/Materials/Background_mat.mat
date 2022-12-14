@@ -51,11 +51,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Offset: 0
+    - _Luminance: -0.64
+    - _Offset: 1.5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SIdeWays: 1
-    - _Tilling: 63.4
+    - _Tilling: 293.34
     m_Colors:
     - _MinMax: {r: 0.3, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

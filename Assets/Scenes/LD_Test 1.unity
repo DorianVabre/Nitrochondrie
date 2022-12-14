@@ -3500,6 +3500,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4046743774328057120, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 211438d059cc31f4ebf3881a95e6ce44, type: 3}
     - target: {fileID: 4788897450939672106, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_Name
       value: GameManager
