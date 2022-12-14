@@ -39,12 +39,32 @@ public class GameManager : MonoBehaviour
     public float volume2;
     public float volume3;
 
+    private float startTimer;
+    private float startTimerLimit;
+    public GameObject inputManager;
+    private bool raceStarted;
+
     private void Awake() {
         cpm = GetComponent<CheckPointManager>();
     }
 
-    // Start is called before the first frame update
     void Start() {
+        startTimer = 0f;
+        startTimerLimit = 4.2f;
+        raceStarted = false;
+    }
+
+    void Update() {
+        if(!raceStarted){
+            startTimer += Time.deltaTime;
+            if(startTimer >= startTimerLimit){
+                StartRace();
+                raceStarted = true;
+            }
+        }
+    }
+
+    void StartRace() {
         if(timerManager){
             timerManager.StartTimer();
             amountOfCheckpoints = cpm.player1Checkpoints.Count;
@@ -56,6 +76,10 @@ public class GameManager : MonoBehaviour
             firstQuarterCheckpoint = (int)amountOfCheckpoints / 4;
             secondQuarterCheckpoint = (int)amountOfCheckpoints / 2;
             thirdQuarterCheckpoint = (int)amountOfCheckpoints * 3 / 4;
+            if(inputManager){
+                inputManager.SetActive(true);
+            }
+            Debug.Log("AAAAAAAA");
         }
     }
 
