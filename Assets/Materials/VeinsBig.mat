@@ -57,7 +57,7 @@ Material:
     - _BaseTilling: 6
     - _BigSphere: 0
     - _BlendSharpness: 1.55
-    - _CellDensityDisplacement: 5
+    - _CellDensityDisplacement: 1.36
     - _DisplacePower: 250
     - _IsBackground: 1
     - _ObjCoord: 0
@@ -65,11 +65,11 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Speed: 1.82
-    - _Tilling: 0.04
+    - _Tilling: 0.14
     m_Colors:
     - _MinMaxRough: {r: 0.6, g: 0.75, b: 0, a: 0}
-    - _Tint: {r: 0.8773585, g: 0.45186326, b: 0.40970984, a: 0}
-    - _Tint2: {r: 0.83137256, g: 0.27843136, b: 0.30537084, a: 0}
+    - _Tint: {r: 0.7169812, g: 0.35756055, b: 0.32128873, a: 0}
+    - _Tint2: {r: 0.745283, g: 0.24959952, b: 0.27492645, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4946407641451579646
 MonoBehaviour:
