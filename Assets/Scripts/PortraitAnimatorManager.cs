@@ -6,8 +6,6 @@ public class PortraitAnimatorManager : MonoBehaviour
     private Rigidbody2D rb;
     public float speedThresholdBeforeSpeedyAnim = 2f;
 
-    private bool isActive = true;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -15,10 +13,6 @@ public class PortraitAnimatorManager : MonoBehaviour
 
     void Update()
     {
-        if (!isActive) {
-            return;
-        }
-
         if (rb.velocity.magnitude >= speedThresholdBeforeSpeedyAnim) {
             anim.SetBool("speed", true);
         } else {
@@ -26,13 +20,10 @@ public class PortraitAnimatorManager : MonoBehaviour
         }
     }
     public void SetVictory(bool hasWon) {
-        isActive = false;
-        anim.SetBool("speed", false);
-
         if (hasWon) {
-            anim.SetBool("hasWinned", true);
+            anim.SetTrigger("hasWon");
         } else {
-            anim.SetBool("hasLost", true);
+            anim.SetTrigger("hasLost");
         }
 
     }
