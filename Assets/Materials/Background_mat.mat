@@ -52,11 +52,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _Luminance: -0.64
-    - _Offset: 1.5
+    - _Offset: 16.6
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SIdeWays: 1
-    - _Tilling: 293.34
+    - _Tilling: 426.26
     m_Colors:
-    - _MinMax: {r: 0.3, g: 0.5, b: 0, a: 0}
+    - _MinMax: {r: 0.15, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

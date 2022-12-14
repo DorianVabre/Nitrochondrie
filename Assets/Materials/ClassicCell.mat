@@ -57,7 +57,7 @@ Material:
     - _BaseTilling: 82.8
     - _BigSphere: 0
     - _BlendSharpness: 1.55
-    - _CellDensityDisplacement: 20.21
+    - _CellDensityDisplacement: 12
     - _DisplacePower: 3
     - _IsBackground: 0
     - _ObjCoord: 0
