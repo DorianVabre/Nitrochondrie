@@ -47,16 +47,16 @@ public class GameManager : MonoBehaviour
     void Start() {
         if(timerManager){
             timerManager.StartTimer();
-        }
-        amountOfCheckpoints = cpm.player1Checkpoints.Count;
-        startCheckpointForSecondLayer = amountOfCheckpoints * secondLayerStartCheckpointReachedPercentage / 100;
-        startCheckpointForThirdLayer = amountOfCheckpoints * thirdLayerStartCheckpointReachedPercentage / 100;
-        secondLayerDeltaVolume = secondLayerMaxVolume - secondLayerMinVolume;
-        thirdLayerDeltaVolume = thirdLayerMaxVolume - thirdLayerMinVolume;
+            amountOfCheckpoints = cpm.player1Checkpoints.Count;
+            startCheckpointForSecondLayer = amountOfCheckpoints * secondLayerStartCheckpointReachedPercentage / 100;
+            startCheckpointForThirdLayer = amountOfCheckpoints * thirdLayerStartCheckpointReachedPercentage / 100;
+            secondLayerDeltaVolume = secondLayerMaxVolume - secondLayerMinVolume;
+            thirdLayerDeltaVolume = thirdLayerMaxVolume - thirdLayerMinVolume;
 
-        firstQuarterCheckpoint = (int)amountOfCheckpoints / 4;
-        secondQuarterCheckpoint = (int)amountOfCheckpoints / 2;
-        thirdQuarterCheckpoint = (int)amountOfCheckpoints * 3 / 4;
+            firstQuarterCheckpoint = (int)amountOfCheckpoints / 4;
+            secondQuarterCheckpoint = (int)amountOfCheckpoints / 2;
+            thirdQuarterCheckpoint = (int)amountOfCheckpoints * 3 / 4;
+        }
     }
 
     public void CheckMusicChange(int checkpointsReachedByP1, int checkpointsReachedByP2){
