@@ -4445,6 +4445,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5416987138603370231, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 851331877}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f734be57ddf7e984384c4593916b9835, type: 3}
 --- !u!4 &758392709 stripped
@@ -5878,6 +5882,14 @@ PrefabInstance:
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 1678383741}
+    - target: {fileID: 1646598228757765543, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: transitionSound.playlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 643b6823cb6287a48996701005a13c20, type: 3}
+    - target: {fileID: 1646598228757765543, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: transitionSound.playlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 77d158ec710727b4bbf0605e39afb978, type: 3}
     - target: {fileID: 2318700570420849133, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_SortingOrder
       value: 100
@@ -5964,19 +5976,19 @@ PrefabInstance:
       objectReference: {fileID: 1084598437}
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: thirdLayerMaxVolume
-      value: 0
+      value: 0.77
       objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: thirdLayerMinVolume
-      value: 0
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: secondLayerMaxVolume
-      value: 0
+      value: 0.77
       objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: secondLayerMinVolume
-      value: 0
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 4788897450939672109, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: lapMusic.Array.data[0]
@@ -6034,14 +6046,26 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5911046591570502156, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bd82a577c458e474da43a1122712d2af, type: 3}
     - target: {fileID: 7314903297505482345, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_Volume
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 7314903297505482345, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 84f6b03bf3f825446bc83fae56888a2d, type: 3}
     - target: {fileID: 7935875756211560903, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_Volume
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7935875756211560903, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5af4452ca1107d44b988ef33992667e8, type: 3}
     - target: {fileID: 8807747105102302316, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_AllowMSAA
       value: 0
@@ -8666,6 +8690,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 8650973370592477139, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1365951866}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
 --- !u!4 &1648615029 stripped

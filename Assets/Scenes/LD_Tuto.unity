@@ -18765,6 +18765,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1646598228757765543, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: transitionSound.playlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 643b6823cb6287a48996701005a13c20, type: 3}
+    - target: {fileID: 1646598228757765543, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
+      propertyPath: transitionSound.playlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 77d158ec710727b4bbf0605e39afb978, type: 3}
     - target: {fileID: 4788897450939672106, guid: 8f7a2607b0826444f8b1554d3f769b15, type: 3}
       propertyPath: m_Name
       value: GameManager

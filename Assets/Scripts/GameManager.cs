@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     private int secondQuarterCheckpoint;
     private int thirdQuarterCheckpoint;
 
-    public float volume1;
     public float volume2;
     public float volume3;
 
