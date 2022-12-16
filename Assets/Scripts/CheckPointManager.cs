@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class CheckPointManager : MonoBehaviour
@@ -10,6 +11,11 @@ public class CheckPointManager : MonoBehaviour
 
     PortraitAnimatorManager portraitP1;
     PortraitAnimatorManager portraitP2;
+
+    public GameObject winningUI;
+    public TextMeshProUGUI topTimerText;
+    public TextMeshProUGUI playerWinText;
+    public TextMeshProUGUI timerWinText;
 
     public Transform checkpointLapEnd;
 
@@ -27,7 +33,10 @@ public class CheckPointManager : MonoBehaviour
 
     private int whoIsAhead = 1;
 
+    public InputActionAsset actionAssetForReload;
+
     private void Awake() {
+        winningUI.SetActive(false);
         portraitP1 = GameObject.FindGameObjectWithTag("Player1").GetComponentInChildren<PortraitAnimatorManager>();
         portraitP2 = GameObject.FindGameObjectWithTag("Player2").GetComponentInChildren<PortraitAnimatorManager>();
     }
@@ -67,14 +76,34 @@ public class CheckPointManager : MonoBehaviour
     }
 
     void CheckVictory() {
+        bool gameHasEnded = false;
         if (lapsDoneByP1 >= lapsToWin) {
             portraitP1.SetVictory(true);
             portraitP2.SetVictory(false);
-            Time.timeScale = 0.4f;
+            playerWinText.text = "J1  won!";
+            gameHasEnded = true;
         } else if (lapsDoneByP2 >= lapsToWin) {
             portraitP1.SetVictory(false);
             portraitP2.SetVictory(true);
-            Time.timeScale = 0.4f;
+            playerWinText.text = "J2  won!";
+            gameHasEnded = true;
+        }
+
+        if (gameHasEnded) {
+            /*foreach (var action in actionAssetForReload){
+                if (action.name == "ReloadScene") {
+                    action.AddBinding("<Keyboard>/r");
+                }
+            }*/
+            topTimerText.text = "";
+            
+            ReloadManager rm = GetComponent<ReloadManager>();
+            rm.ActivateReload();
+
+            TimerManager tm = GetComponent<TimerManager>();
+            tm.StopTimer();
+            timerWinText.text = tm.GetCurrentTime();
+            winningUI.SetActive(true);
         }
     }
 
