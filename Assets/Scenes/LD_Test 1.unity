@@ -8920,18 +8920,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1365951866}
     - target: {fileID: 7694004748084578818, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
-      propertyPath: lapVoices.playlist.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694004748084578818, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
-      propertyPath: lapVoices.playlist.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: e90ebe72f94bab34980716e7a2331402, type: 3}
-    - target: {fileID: 7694004748084578818, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
-      propertyPath: lapVoices.playlist.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 4e6b0622507455b46aafc0199c2fa834, type: 3}
-    - target: {fileID: 7694004748084578818, guid: 30ac84d7a0d7d6f478cf905bd7b909b9, type: 3}
       propertyPath: lapVoices.playlist.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 4e6b0622507455b46aafc0199c2fa834, type: 3}

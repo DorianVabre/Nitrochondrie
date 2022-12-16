@@ -19,6 +19,7 @@ public class PortraitAnimatorManager : MonoBehaviour
             anim.SetBool("speed", false);
         }
     }
+
     public void SetVictory(bool hasWon) {
         if (hasWon) {
             anim.SetTrigger("hasWon");
@@ -26,5 +27,9 @@ public class PortraitAnimatorManager : MonoBehaviour
             anim.SetTrigger("hasLost");
         }
 
+    }
+
+    public void TriggerHurt() {
+        anim.SetTrigger("hurt");
     }
 }

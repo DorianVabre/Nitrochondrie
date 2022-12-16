@@ -15,6 +15,8 @@ public class SlingshotMovement : MonoBehaviour
     public float forceMultiplier = 100;
     public float deadZone = 0.02f;
     public float lerpSpeed = 5f;
+
+    public Vector3 velocityBeforePhysicsUpdate;
     
     public TrailAnimator trailAnimator;
 
@@ -45,6 +47,7 @@ public class SlingshotMovement : MonoBehaviour
 
     private void FixedUpdate() {
         UpdateRotation();
+        velocityBeforePhysicsUpdate = bacteriaRigidBody.velocity;
     }
 
     void UpdateRotation() {

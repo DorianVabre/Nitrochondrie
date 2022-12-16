@@ -220,6 +220,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 4e6b0622507455b46aafc0199c2fa834, type: 3}
     - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHitLine.playlist.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: randomHurt.playlist.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: dbe806e0a3af7b24dbd5e7b603c952ac, type: 3}
@@ -267,6 +271,34 @@ PrefabInstance:
       propertyPath: randomHurt.playlist.Array.data[11]
       value: 
       objectReference: {fileID: 8300000, guid: 370966d62d01aad4cb715b9720d3825e, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHitLine.playlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fa091ac630b54f54580d732f0f177bfd, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHitLine.playlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3362f1c80eaee1a42801b23d89aa4025, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHitLine.playlist.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a025357d23f6554e8d8e0357c4a4503, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHitLine.playlist.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 715ecf930a88536498e9354bf8cd4063, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHitLine.playlist.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: c7b50d5f28ee95044a31d2ab968f9c1b, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHitLine.playlist.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 82ef707e78bb5d441b0dab9ddd84151a, type: 3}
+    - target: {fileID: 6477856206174516006, guid: f734be57ddf7e984384c4593916b9835, type: 3}
+      propertyPath: randomHitLine.playlist.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 200b655d62f52c843a95d23f5b924366, type: 3}
     - target: {fileID: 6952652506670930013, guid: f734be57ddf7e984384c4593916b9835, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -7,6 +7,7 @@ public class SFXManager : MonoBehaviour
     public RandomSoundManager randomHurt;
     public RandomSoundManager randomHitWalls;
     public RandomSoundManager randomHitPlayer;
+    public RandomSoundManager randomHitLine;
     public RandomSoundManager randomStretch;
     public RandomSoundManager randomLaunch;
     public RandomSoundManager randomRelease;
@@ -16,6 +17,7 @@ public class SFXManager : MonoBehaviour
         randomHurt.Update();
         randomHitWalls.Update();
         randomHitPlayer.Update();
+        randomHitLine.Update();
         randomStretch.Update();
         randomLaunch.Update();
         randomRelease.Update();
@@ -31,6 +33,10 @@ public class SFXManager : MonoBehaviour
 
     public void PlayRandomHitPlayer(){
         randomHitPlayer.PlayRandomSound();
+    }
+
+    public void PlayRandomHitLine(){
+        randomHitLine.PlayRandomSound();
     }
 
     public void PlayRandomStretch(){
