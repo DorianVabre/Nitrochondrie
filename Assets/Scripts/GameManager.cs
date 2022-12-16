@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
                 StartRace();
                 raceStarted = true;
             }
-            if(startTimer >= 1.2f && !countdownSoundPlayed){
+            if(startTimer >= 1.2f && !countdownSoundPlayed && timerManager){
                 StartCoroutine(PlayCountdown());
                 countdownSoundPlayed = true;
             }
