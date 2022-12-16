@@ -42,7 +42,11 @@ public class GameManager : MonoBehaviour
     private float startTimerLimit;
     public GameObject inputManager;
     private bool raceStarted;
-    public AudioSource countdownSound;
+    public RandomSoundManager countdownSounds;
+    public RandomSoundManager countdownVoices3;
+    public RandomSoundManager countdownVoices2;
+    public RandomSoundManager countdownVoices1;
+    public RandomSoundManager countdownVoices0;
     private bool countdownSoundPlayed;
 
     private void Awake() {
@@ -64,10 +68,38 @@ public class GameManager : MonoBehaviour
                 raceStarted = true;
             }
             if(startTimer >= 1.2f && !countdownSoundPlayed){
-                countdownSound.Play();
+                StartCoroutine(PlayCountdown());
                 countdownSoundPlayed = true;
             }
-            
+        }
+    }
+
+    IEnumerator PlayCountdown() {
+        float countdownTime = 3.0f;
+        bool played3 = false;
+        bool played2 = false;
+        bool played1 = false;
+        bool played0 = false;
+        while (countdownTime >= 0f) {
+            countdownTime -= Time.deltaTime;
+                if(countdownTime <= 3f && !played3){
+                    countdownSounds.PlaySound(0);
+                    countdownVoices3.PlayRandomSound();
+                    played3 = true;
+                } else if(countdownTime <= 2f && !played2) {
+                    countdownSounds.PlaySound(1);
+                    countdownVoices2.PlayRandomSound();
+                    played2 = true;
+                } else if(countdownTime <= 1f && !played1) {
+                    countdownSounds.PlaySound(2);
+                    countdownVoices1.PlayRandomSound();
+                    played1 = true;
+                } else if(countdownTime <= 0f && !played0) {
+                    countdownSounds.PlaySound(3);
+                    countdownVoices0.PlayRandomSound();
+                    played0 = true;
+                }
+            yield return null;
         }
     }
 

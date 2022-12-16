@@ -21,6 +21,10 @@ public class LevelTransition : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void ReloadLevel() {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+    }
+
     IEnumerator LoadLevel(int levelIndex) {
         transitionSound.PlaySound(1);
         StartCoroutine(FadeOut(musicSource, 1.0f));

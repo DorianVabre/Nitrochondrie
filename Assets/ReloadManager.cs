@@ -18,7 +18,9 @@ public class ReloadManager : MonoBehaviour
 
     public void OnReload() {
         if (reloadActive) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            reloadActive = false;
+            LevelTransition lt = GetComponent<LevelTransition>();
+            lt.ReloadLevel();
         }
     }
 }
